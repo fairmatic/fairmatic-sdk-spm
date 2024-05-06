@@ -39,10 +39,7 @@ let package = Package(
                 .linkedFramework("Accelerate"),
                 .linkedLibrary("z"),
                 .linkedLibrary("sqlite3"),
-                .linkedLibrary("c++"),
-                .unsafeFlags([
-                    "-ObjC", "-lC++"
-                ])
+                .linkedLibrary("c++")
             ]
         ),
         .binaryTarget(
