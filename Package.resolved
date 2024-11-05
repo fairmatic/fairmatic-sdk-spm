@@ -9,15 +9,6 @@
           "revision": "8ff8bebfe24271f7b16c5abaeb78daf82bee3a80",
           "version": "2.34.2"
         }
-      },
-      {
-        "package": "SQLite.swift",
-        "repositoryURL": "https://github.com/fairmatic/SQLite.swift.git",
-        "state": {
-          "branch": null,
-          "revision": "4f998a077518b8514f7bfe91420384c120f05269",
-          "version": "0.15.4"
-        }
       }
     ]
   },
