@@ -24,6 +24,12 @@ let package = Package(
             dependencies: [
                 .target(name: "FairmaticSDK"),
                 .target(name: "SQLite"),
+                .target(name: "DriveKitTripAnalysis"),
+                .target(name: "DriveKitCore"),
+                .target(name: "DriveKitNetworking"),
+                .target(name: "DriveKitDBVehicleAccess"),
+                .target(name: "DriveKitDBTripAccess"),
+                .target(name: "DriveKitBeaconUtils"),
                 .product(name: "AWSSQS", package: "aws-sdk-ios-spm"),
                 .product(name: "AWSCore", package: "aws-sdk-ios-spm")
             ],
@@ -46,6 +52,18 @@ let package = Package(
             name: "SQLite",
             path: "SQLite.xcframework"
         ),
+        .binaryTarget(name: "DriveKitTripAnalysis",
+                      path: "DriveKitTripAnalysisModule.xcframework"),
+        .binaryTarget(name: "DriveKitCore",
+                      path: "DriveKitCoreModule.xcframework"),
+        .binaryTarget(name: "DriveKitNetworking",
+                      path: "DriveKitNetworkingModule.xcframework"),
+        .binaryTarget(name: "DriveKitDBVehicleAccess",
+                      path: "DriveKitDBVehicleAccessModule.xcframework"),
+        .binaryTarget(name: "DriveKitDBTripAccess",
+                      path: "DriveKitDBTripAccessModule.xcframework"),
+        .binaryTarget(name: "DriveKitBeaconUtils",
+                      path: "DriveKitBeaconUtilsModule.xcframework"),
         .target(
             name: "FairmaticSDKTarget",
             dependencies: [.target(name: "FairmaticSDKWrapper")]
