@@ -1,0 +1,4 @@
+framework module DriveKitNetworkingModule {
+  header "DriveKitNetworkingModule-Swift.h"
+  requires objc
+}

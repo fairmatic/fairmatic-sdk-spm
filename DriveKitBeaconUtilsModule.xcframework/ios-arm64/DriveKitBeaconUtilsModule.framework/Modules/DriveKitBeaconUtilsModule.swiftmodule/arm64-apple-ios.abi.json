@@ -1,0 +1,2749 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "DriveKitBeaconUtilsModule",
+    "printedName": "DriveKitBeaconUtilsModule",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "DriveKitBeaconUtilsModule",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "BeaconInfoResult",
+        "printedName": "BeaconInfoResult",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "success",
+            "printedName": "success",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(DriveKitBeaconUtilsModule.BeaconInfoResult.Type) -> (Swift.Int, Swift.Double, Swift.Double, Swift.Int) -> DriveKitBeaconUtilsModule.BeaconInfoResult",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Int, Swift.Double, Swift.Double, Swift.Int) -> DriveKitBeaconUtilsModule.BeaconInfoResult",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "BeaconInfoResult",
+                        "printedName": "DriveKitBeaconUtilsModule.BeaconInfoResult",
+                        "usr": "s:25DriveKitBeaconUtilsModule0C10InfoResultO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(batteryLevel: Swift.Int, estimatedDistance: Swift.Double, rssi: Swift.Double, txPower: Swift.Int)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Int",
+                            "printedName": "Swift.Int",
+                            "usr": "s:Si"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Double",
+                            "printedName": "Swift.Double",
+                            "usr": "s:Sd"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Double",
+                            "printedName": "Swift.Double",
+                            "usr": "s:Sd"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Int",
+                            "printedName": "Swift.Int",
+                            "usr": "s:Si"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "DriveKitBeaconUtilsModule.BeaconInfoResult.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "BeaconInfoResult",
+                        "printedName": "DriveKitBeaconUtilsModule.BeaconInfoResult",
+                        "usr": "s:25DriveKitBeaconUtilsModule0C10InfoResultO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:25DriveKitBeaconUtilsModule0C10InfoResultO7successyACSi_S2dSitcACmF",
+            "mangledName": "$s25DriveKitBeaconUtilsModule0C10InfoResultO7successyACSi_S2dSitcACmF",
+            "moduleName": "DriveKitBeaconUtilsModule"
+          },
+          {
+            "kind": "Var",
+            "name": "error",
+            "printedName": "error",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(DriveKitBeaconUtilsModule.BeaconInfoResult.Type) -> DriveKitBeaconUtilsModule.BeaconInfoResult",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "BeaconInfoResult",
+                    "printedName": "DriveKitBeaconUtilsModule.BeaconInfoResult",
+                    "usr": "s:25DriveKitBeaconUtilsModule0C10InfoResultO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "DriveKitBeaconUtilsModule.BeaconInfoResult.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "BeaconInfoResult",
+                        "printedName": "DriveKitBeaconUtilsModule.BeaconInfoResult",
+                        "usr": "s:25DriveKitBeaconUtilsModule0C10InfoResultO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:25DriveKitBeaconUtilsModule0C10InfoResultO5erroryA2CmF",
+            "mangledName": "$s25DriveKitBeaconUtilsModule0C10InfoResultO5erroryA2CmF",
+            "moduleName": "DriveKitBeaconUtilsModule"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:25DriveKitBeaconUtilsModule0C10InfoResultO",
+        "mangledName": "$s25DriveKitBeaconUtilsModule0C10InfoResultO",
+        "moduleName": "DriveKitBeaconUtilsModule",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "DriveKitBeaconUtilsModule",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CoreLocation",
+        "printedName": "CoreLocation",
+        "declKind": "Import",
+        "moduleName": "DriveKitBeaconUtilsModule"
+      },
+      {
+        "kind": "Import",
+        "name": "CoreBluetooth",
+        "printedName": "CoreBluetooth",
+        "declKind": "Import",
+        "moduleName": "DriveKitBeaconUtilsModule"
+      },
+      {
+        "kind": "Import",
+        "name": "DriveKitCoreModule",
+        "printedName": "DriveKitCoreModule",
+        "declKind": "Import",
+        "moduleName": "DriveKitBeaconUtilsModule"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "DKBeaconScanner",
+        "printedName": "DKBeaconScanner",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "beaconConfigList",
+            "printedName": "beaconConfigList",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[any DriveKitBeaconUtilsModule.DKBeaconConfig]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DKBeaconConfig",
+                    "printedName": "any DriveKitBeaconUtilsModule.DKBeaconConfig",
+                    "usr": "c:@M@DriveKitBeaconUtilsModule@objc(pl)DKBeaconConfig"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@DriveKitBeaconUtilsModule@objc(cs)DKBeaconScanner(cpy)beaconConfigList",
+            "mangledName": "$s25DriveKitBeaconUtilsModule15DKBeaconScannerC16beaconConfigListSayAA0fI0_pGvpZ",
+            "moduleName": "DriveKitBeaconUtilsModule",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[any DriveKitBeaconUtilsModule.DKBeaconConfig]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DKBeaconConfig",
+                        "printedName": "any DriveKitBeaconUtilsModule.DKBeaconConfig",
+                        "usr": "c:@M@DriveKitBeaconUtilsModule@objc(pl)DKBeaconConfig"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@DriveKitBeaconUtilsModule@objc(cs)DKBeaconScanner(cm)beaconConfigList",
+                "mangledName": "$s25DriveKitBeaconUtilsModule15DKBeaconScannerC16beaconConfigListSayAA0fI0_pGvgZ",
+                "moduleName": "DriveKitBeaconUtilsModule",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[any DriveKitBeaconUtilsModule.DKBeaconConfig]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DKBeaconConfig",
+                        "printedName": "any DriveKitBeaconUtilsModule.DKBeaconConfig",
+                        "usr": "c:@M@DriveKitBeaconUtilsModule@objc(pl)DKBeaconConfig"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@DriveKitBeaconUtilsModule@objc(cs)DKBeaconScanner(cm)setBeaconConfigList:",
+                "mangledName": "$s25DriveKitBeaconUtilsModule15DKBeaconScannerC16beaconConfigListSayAA0fI0_pGvsZ",
+                "moduleName": "DriveKitBeaconUtilsModule",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:25DriveKitBeaconUtilsModule15DKBeaconScannerC16beaconConfigListSayAA0fI0_pGvMZ",
+                "mangledName": "$s25DriveKitBeaconUtilsModule15DKBeaconScannerC16beaconConfigListSayAA0fI0_pGvMZ",
+                "moduleName": "DriveKitBeaconUtilsModule",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "startBeaconScan",
+            "printedName": "startBeaconScan(beacons:useMajorMinor:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[DriveKitBeaconUtilsModule.DKBeacon]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DKBeacon",
+                    "printedName": "DriveKitBeaconUtilsModule.DKBeacon",
+                    "usr": "c:@M@DriveKitBeaconUtilsModule@objc(cs)DKBeacon"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "([CoreLocation.CLBeacon]) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[CoreLocation.CLBeacon]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CLBeacon",
+                        "printedName": "CoreLocation.CLBeacon",
+                        "usr": "c:objc(cs)CLBeacon"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@DriveKitBeaconUtilsModule@objc(cs)DKBeaconScanner(im)startBeaconScanWithBeacons:useMajorMinor:completion:",
+            "mangledName": "$s25DriveKitBeaconUtilsModule15DKBeaconScannerC05startC4Scan7beacons13useMajorMinor10completionySayAA0F0CG_SbySaySo8CLBeaconCGctF",
+            "moduleName": "DriveKitBeaconUtilsModule",
+            "objc_name": "startBeaconScanWithBeacons:useMajorMinor:completion:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "stopBeaconScan",
+            "printedName": "stopBeaconScan()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@DriveKitBeaconUtilsModule@objc(cs)DKBeaconScanner(im)stopBeaconScan",
+            "mangledName": "$s25DriveKitBeaconUtilsModule15DKBeaconScannerC04stopC4ScanyyF",
+            "moduleName": "DriveKitBeaconUtilsModule",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "startBeaconInfoScan",
+            "printedName": "startBeaconInfoScan(configurations:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[any DriveKitBeaconUtilsModule.DKBeaconConfig]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DKBeaconConfig",
+                    "printedName": "any DriveKitBeaconUtilsModule.DKBeaconConfig",
+                    "usr": "c:@M@DriveKitBeaconUtilsModule@objc(pl)DKBeaconConfig"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(DriveKitBeaconUtilsModule.BeaconInfoResult) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "BeaconInfoResult",
+                    "printedName": "DriveKitBeaconUtilsModule.BeaconInfoResult",
+                    "usr": "s:25DriveKitBeaconUtilsModule0C10InfoResultO"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:25DriveKitBeaconUtilsModule15DKBeaconScannerC05startC8InfoScan14configurations10completionySayAA0F6Config_pG_yAA0cI6ResultOctF",
+            "mangledName": "$s25DriveKitBeaconUtilsModule15DKBeaconScannerC05startC8InfoScan14configurations10completionySayAA0F6Config_pG_yAA0cI6ResultOctF",
+            "moduleName": "DriveKitBeaconUtilsModule",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "objc_startBeaconInfoScan",
+            "printedName": "objc_startBeaconInfoScan(completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Int, Swift.Double, Swift.Double, Swift.Int, Swift.Bool) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(Swift.Int, Swift.Double, Swift.Double, Swift.Int, Swift.Bool)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Double",
+                        "printedName": "Swift.Double",
+                        "usr": "s:Sd"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Double",
+                        "printedName": "Swift.Double",
+                        "usr": "s:Sd"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@DriveKitBeaconUtilsModule@objc(cs)DKBeaconScanner(im)startBeaconInfoScan:",
+            "mangledName": "$s25DriveKitBeaconUtilsModule15DKBeaconScannerC010objc_startC8InfoScan10completionyySi_S2dSiSbtc_tF",
+            "moduleName": "DriveKitBeaconUtilsModule",
+            "objc_name": "startBeaconInfoScan:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "objc_startBeaconInfoRetrieval",
+            "printedName": "objc_startBeaconInfoRetrieval(configurations:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[any DriveKitBeaconUtilsModule.DKBeaconConfig]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DKBeaconConfig",
+                    "printedName": "any DriveKitBeaconUtilsModule.DKBeaconConfig",
+                    "usr": "c:@M@DriveKitBeaconUtilsModule@objc(pl)DKBeaconConfig"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Int, Swift.Double, Swift.Double, Swift.Int, Swift.Bool) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(Swift.Int, Swift.Double, Swift.Double, Swift.Int, Swift.Bool)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Double",
+                        "printedName": "Swift.Double",
+                        "usr": "s:Sd"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Double",
+                        "printedName": "Swift.Double",
+                        "usr": "s:Sd"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@DriveKitBeaconUtilsModule@objc(cs)DKBeaconScanner(im)startBeaconInfoRetrievalWithConfigurations:completion:",
+            "mangledName": "$s25DriveKitBeaconUtilsModule15DKBeaconScannerC010objc_startC13InfoRetrieval14configurations10completionySayAA0F6Config_pG_ySi_S2dSiSbtctF",
+            "moduleName": "DriveKitBeaconUtilsModule",
+            "objc_name": "startBeaconInfoRetrievalWithConfigurations:completion:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "stopBeaconInfoScan",
+            "printedName": "stopBeaconInfoScan()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@DriveKitBeaconUtilsModule@objc(cs)DKBeaconScanner(im)stopBeaconInfoScan",
+            "mangledName": "$s25DriveKitBeaconUtilsModule15DKBeaconScannerC04stopC8InfoScanyyF",
+            "moduleName": "DriveKitBeaconUtilsModule",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DKBeaconScanner",
+                "printedName": "DriveKitBeaconUtilsModule.DKBeaconScanner",
+                "usr": "c:@M@DriveKitBeaconUtilsModule@objc(cs)DKBeaconScanner"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@DriveKitBeaconUtilsModule@objc(cs)DKBeaconScanner(im)init",
+            "mangledName": "$s25DriveKitBeaconUtilsModule15DKBeaconScannerCACycfc",
+            "moduleName": "DriveKitBeaconUtilsModule",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "locationManager",
+            "printedName": "locationManager(_:didRange:satisfying:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CLLocationManager",
+                "printedName": "CoreLocation.CLLocationManager",
+                "usr": "c:objc(cs)CLLocationManager"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[CoreLocation.CLBeacon]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CLBeacon",
+                    "printedName": "CoreLocation.CLBeacon",
+                    "usr": "c:objc(cs)CLBeacon"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CLBeaconIdentityConstraint",
+                "printedName": "CoreLocation.CLBeaconIdentityConstraint",
+                "usr": "c:objc(cs)CLBeaconIdentityConstraint"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@DriveKitBeaconUtilsModule@objc(cs)DKBeaconScanner(im)locationManager:didRangeBeacons:satisfyingConstraint:",
+            "mangledName": "$s25DriveKitBeaconUtilsModule15DKBeaconScannerC15locationManager_8didRange10satisfyingySo010CLLocationI0C_SaySo8CLBeaconCGSo0N18IdentityConstraintCtF",
+            "moduleName": "DriveKitBeaconUtilsModule",
+            "objc_name": "locationManager:didRangeBeacons:satisfyingConstraint:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "centralManagerDidUpdateState",
+            "printedName": "centralManagerDidUpdateState(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CBCentralManager",
+                "printedName": "CoreBluetooth.CBCentralManager",
+                "usr": "c:objc(cs)CBCentralManager"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@DriveKitBeaconUtilsModule@objc(cs)DKBeaconScanner(im)centralManagerDidUpdateState:",
+            "mangledName": "$s25DriveKitBeaconUtilsModule15DKBeaconScannerC28centralManagerDidUpdateStateyySo09CBCentralI0CF",
+            "moduleName": "DriveKitBeaconUtilsModule",
+            "objc_name": "centralManagerDidUpdateState:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "centralManager",
+            "printedName": "centralManager(_:didDiscover:advertisementData:rssi:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CBCentralManager",
+                "printedName": "CoreBluetooth.CBCentralManager",
+                "usr": "c:objc(cs)CBCentralManager"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CBPeripheral",
+                "printedName": "CoreBluetooth.CBPeripheral",
+                "usr": "c:objc(cs)CBPeripheral"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Any]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "Any"
+                  }
+                ],
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSNumber",
+                "printedName": "Foundation.NSNumber",
+                "usr": "c:objc(cs)NSNumber"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@DriveKitBeaconUtilsModule@objc(cs)DKBeaconScanner(im)centralManager:didDiscoverPeripheral:advertisementData:RSSI:",
+            "mangledName": "$s25DriveKitBeaconUtilsModule15DKBeaconScannerC14centralManager_11didDiscover17advertisementData4rssiySo09CBCentralI0C_So12CBPeripheralCSDySSypGSo8NSNumberCtF",
+            "moduleName": "DriveKitBeaconUtilsModule",
+            "objc_name": "centralManager:didDiscoverPeripheral:advertisementData:RSSI:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@DriveKitBeaconUtilsModule@objc(cs)DKBeaconScanner",
+        "mangledName": "$s25DriveKitBeaconUtilsModule15DKBeaconScannerC",
+        "moduleName": "DriveKitBeaconUtilsModule",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "DriveKitBeaconUtilsModule",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "DKBeaconConfig",
+        "printedName": "DKBeaconConfig",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "serviceUuid",
+            "printedName": "serviceUuid",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@DriveKitBeaconUtilsModule@objc(pl)DKBeaconConfig(py)serviceUuid",
+            "mangledName": "$s25DriveKitBeaconUtilsModule14DKBeaconConfigP11serviceUuidSSvp",
+            "moduleName": "DriveKitBeaconUtilsModule",
+            "protocolReq": true,
+            "declAttributes": [
+              "ObjC"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@DriveKitBeaconUtilsModule@objc(pl)DKBeaconConfig(im)serviceUuid",
+                "mangledName": "$s25DriveKitBeaconUtilsModule14DKBeaconConfigP11serviceUuidSSvg",
+                "moduleName": "DriveKitBeaconUtilsModule",
+                "genericSig": "<τ_0_0 where τ_0_0 : DriveKitBeaconUtilsModule.DKBeaconConfig>",
+                "sugared_genericSig": "<Self where Self : DriveKitBeaconUtilsModule.DKBeaconConfig>",
+                "protocolReq": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "batteryLevelPositionInService",
+            "printedName": "batteryLevelPositionInService",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@DriveKitBeaconUtilsModule@objc(pl)DKBeaconConfig(py)batteryLevelPositionInService",
+            "mangledName": "$s25DriveKitBeaconUtilsModule14DKBeaconConfigP29batteryLevelPositionInServiceSivp",
+            "moduleName": "DriveKitBeaconUtilsModule",
+            "protocolReq": true,
+            "declAttributes": [
+              "ObjC"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@DriveKitBeaconUtilsModule@objc(pl)DKBeaconConfig(im)batteryLevelPositionInService",
+                "mangledName": "$s25DriveKitBeaconUtilsModule14DKBeaconConfigP29batteryLevelPositionInServiceSivg",
+                "moduleName": "DriveKitBeaconUtilsModule",
+                "genericSig": "<τ_0_0 where τ_0_0 : DriveKitBeaconUtilsModule.DKBeaconConfig>",
+                "sugared_genericSig": "<Self where Self : DriveKitBeaconUtilsModule.DKBeaconConfig>",
+                "protocolReq": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "rssiAtOneMeter",
+            "printedName": "rssiAtOneMeter",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@DriveKitBeaconUtilsModule@objc(pl)DKBeaconConfig(py)rssiAtOneMeter",
+            "mangledName": "$s25DriveKitBeaconUtilsModule14DKBeaconConfigP14rssiAtOneMeterSivp",
+            "moduleName": "DriveKitBeaconUtilsModule",
+            "protocolReq": true,
+            "declAttributes": [
+              "ObjC"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@DriveKitBeaconUtilsModule@objc(pl)DKBeaconConfig(im)rssiAtOneMeter",
+                "mangledName": "$s25DriveKitBeaconUtilsModule14DKBeaconConfigP14rssiAtOneMeterSivg",
+                "moduleName": "DriveKitBeaconUtilsModule",
+                "genericSig": "<τ_0_0 where τ_0_0 : DriveKitBeaconUtilsModule.DKBeaconConfig>",
+                "sugared_genericSig": "<Self where Self : DriveKitBeaconUtilsModule.DKBeaconConfig>",
+                "protocolReq": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "c:@M@DriveKitBeaconUtilsModule@objc(pl)DKBeaconConfig",
+        "mangledName": "$s25DriveKitBeaconUtilsModule14DKBeaconConfigP",
+        "moduleName": "DriveKitBeaconUtilsModule",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "DKKontaktBeacon",
+        "printedName": "DKKontaktBeacon",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "serviceUuid",
+            "printedName": "serviceUuid",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@DriveKitBeaconUtilsModule@objc(cs)DKKontaktBeacon(py)serviceUuid",
+            "mangledName": "$s25DriveKitBeaconUtilsModule09DKKontaktC0C11serviceUuidSSvp",
+            "moduleName": "DriveKitBeaconUtilsModule",
+            "objc_name": "serviceUuid",
+            "declAttributes": [
+              "HasInitialValue",
+              "ObjC",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@DriveKitBeaconUtilsModule@objc(cs)DKKontaktBeacon(im)serviceUuid",
+                "mangledName": "$s25DriveKitBeaconUtilsModule09DKKontaktC0C11serviceUuidSSvg",
+                "moduleName": "DriveKitBeaconUtilsModule",
+                "implicit": true,
+                "objc_name": "serviceUuid",
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@DriveKitBeaconUtilsModule@objc(cs)DKKontaktBeacon(im)setServiceUuid:",
+                "mangledName": "$s25DriveKitBeaconUtilsModule09DKKontaktC0C11serviceUuidSSvs",
+                "moduleName": "DriveKitBeaconUtilsModule",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:25DriveKitBeaconUtilsModule09DKKontaktC0C11serviceUuidSSvM",
+                "mangledName": "$s25DriveKitBeaconUtilsModule09DKKontaktC0C11serviceUuidSSvM",
+                "moduleName": "DriveKitBeaconUtilsModule",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "batteryLevelPositionInService",
+            "printedName": "batteryLevelPositionInService",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@DriveKitBeaconUtilsModule@objc(cs)DKKontaktBeacon(py)batteryLevelPositionInService",
+            "mangledName": "$s25DriveKitBeaconUtilsModule09DKKontaktC0C29batteryLevelPositionInServiceSivp",
+            "moduleName": "DriveKitBeaconUtilsModule",
+            "objc_name": "batteryLevelPositionInService",
+            "declAttributes": [
+              "HasInitialValue",
+              "ObjC",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@DriveKitBeaconUtilsModule@objc(cs)DKKontaktBeacon(im)batteryLevelPositionInService",
+                "mangledName": "$s25DriveKitBeaconUtilsModule09DKKontaktC0C29batteryLevelPositionInServiceSivg",
+                "moduleName": "DriveKitBeaconUtilsModule",
+                "implicit": true,
+                "objc_name": "batteryLevelPositionInService",
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@DriveKitBeaconUtilsModule@objc(cs)DKKontaktBeacon(im)setBatteryLevelPositionInService:",
+                "mangledName": "$s25DriveKitBeaconUtilsModule09DKKontaktC0C29batteryLevelPositionInServiceSivs",
+                "moduleName": "DriveKitBeaconUtilsModule",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:25DriveKitBeaconUtilsModule09DKKontaktC0C29batteryLevelPositionInServiceSivM",
+                "mangledName": "$s25DriveKitBeaconUtilsModule09DKKontaktC0C29batteryLevelPositionInServiceSivM",
+                "moduleName": "DriveKitBeaconUtilsModule",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "rssiAtOneMeter",
+            "printedName": "rssiAtOneMeter",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@DriveKitBeaconUtilsModule@objc(cs)DKKontaktBeacon(py)rssiAtOneMeter",
+            "mangledName": "$s25DriveKitBeaconUtilsModule09DKKontaktC0C14rssiAtOneMeterSivp",
+            "moduleName": "DriveKitBeaconUtilsModule",
+            "objc_name": "rssiAtOneMeter",
+            "declAttributes": [
+              "HasInitialValue",
+              "ObjC",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@DriveKitBeaconUtilsModule@objc(cs)DKKontaktBeacon(im)rssiAtOneMeter",
+                "mangledName": "$s25DriveKitBeaconUtilsModule09DKKontaktC0C14rssiAtOneMeterSivg",
+                "moduleName": "DriveKitBeaconUtilsModule",
+                "implicit": true,
+                "objc_name": "rssiAtOneMeter",
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@DriveKitBeaconUtilsModule@objc(cs)DKKontaktBeacon(im)setRssiAtOneMeter:",
+                "mangledName": "$s25DriveKitBeaconUtilsModule09DKKontaktC0C14rssiAtOneMeterSivs",
+                "moduleName": "DriveKitBeaconUtilsModule",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:25DriveKitBeaconUtilsModule09DKKontaktC0C14rssiAtOneMeterSivM",
+                "mangledName": "$s25DriveKitBeaconUtilsModule09DKKontaktC0C14rssiAtOneMeterSivM",
+                "moduleName": "DriveKitBeaconUtilsModule",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DKKontaktBeacon",
+                "printedName": "DriveKitBeaconUtilsModule.DKKontaktBeacon",
+                "usr": "c:@M@DriveKitBeaconUtilsModule@objc(cs)DKKontaktBeacon"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@DriveKitBeaconUtilsModule@objc(cs)DKKontaktBeacon(im)init",
+            "mangledName": "$s25DriveKitBeaconUtilsModule09DKKontaktC0CACycfc",
+            "moduleName": "DriveKitBeaconUtilsModule",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@DriveKitBeaconUtilsModule@objc(cs)DKKontaktBeacon",
+        "mangledName": "$s25DriveKitBeaconUtilsModule09DKKontaktC0C",
+        "moduleName": "DriveKitBeaconUtilsModule",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC",
+          "RawDocComment"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "DKBeaconConfig",
+            "printedName": "DKBeaconConfig",
+            "usr": "c:@M@DriveKitBeaconUtilsModule@objc(pl)DKBeaconConfig",
+            "mangledName": "$s25DriveKitBeaconUtilsModule14DKBeaconConfigP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "DKKontaktProBeacon",
+        "printedName": "DKKontaktProBeacon",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "serviceUuid",
+            "printedName": "serviceUuid",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@DriveKitBeaconUtilsModule@objc(cs)DKKontaktProBeacon(py)serviceUuid",
+            "mangledName": "$s25DriveKitBeaconUtilsModule012DKKontaktProC0C11serviceUuidSSvp",
+            "moduleName": "DriveKitBeaconUtilsModule",
+            "objc_name": "serviceUuid",
+            "declAttributes": [
+              "HasInitialValue",
+              "ObjC",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@DriveKitBeaconUtilsModule@objc(cs)DKKontaktProBeacon(im)serviceUuid",
+                "mangledName": "$s25DriveKitBeaconUtilsModule012DKKontaktProC0C11serviceUuidSSvg",
+                "moduleName": "DriveKitBeaconUtilsModule",
+                "implicit": true,
+                "objc_name": "serviceUuid",
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@DriveKitBeaconUtilsModule@objc(cs)DKKontaktProBeacon(im)setServiceUuid:",
+                "mangledName": "$s25DriveKitBeaconUtilsModule012DKKontaktProC0C11serviceUuidSSvs",
+                "moduleName": "DriveKitBeaconUtilsModule",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:25DriveKitBeaconUtilsModule012DKKontaktProC0C11serviceUuidSSvM",
+                "mangledName": "$s25DriveKitBeaconUtilsModule012DKKontaktProC0C11serviceUuidSSvM",
+                "moduleName": "DriveKitBeaconUtilsModule",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "batteryLevelPositionInService",
+            "printedName": "batteryLevelPositionInService",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@DriveKitBeaconUtilsModule@objc(cs)DKKontaktProBeacon(py)batteryLevelPositionInService",
+            "mangledName": "$s25DriveKitBeaconUtilsModule012DKKontaktProC0C29batteryLevelPositionInServiceSivp",
+            "moduleName": "DriveKitBeaconUtilsModule",
+            "objc_name": "batteryLevelPositionInService",
+            "declAttributes": [
+              "HasInitialValue",
+              "ObjC",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@DriveKitBeaconUtilsModule@objc(cs)DKKontaktProBeacon(im)batteryLevelPositionInService",
+                "mangledName": "$s25DriveKitBeaconUtilsModule012DKKontaktProC0C29batteryLevelPositionInServiceSivg",
+                "moduleName": "DriveKitBeaconUtilsModule",
+                "implicit": true,
+                "objc_name": "batteryLevelPositionInService",
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@DriveKitBeaconUtilsModule@objc(cs)DKKontaktProBeacon(im)setBatteryLevelPositionInService:",
+                "mangledName": "$s25DriveKitBeaconUtilsModule012DKKontaktProC0C29batteryLevelPositionInServiceSivs",
+                "moduleName": "DriveKitBeaconUtilsModule",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:25DriveKitBeaconUtilsModule012DKKontaktProC0C29batteryLevelPositionInServiceSivM",
+                "mangledName": "$s25DriveKitBeaconUtilsModule012DKKontaktProC0C29batteryLevelPositionInServiceSivM",
+                "moduleName": "DriveKitBeaconUtilsModule",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "rssiAtOneMeter",
+            "printedName": "rssiAtOneMeter",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@DriveKitBeaconUtilsModule@objc(cs)DKKontaktProBeacon(py)rssiAtOneMeter",
+            "mangledName": "$s25DriveKitBeaconUtilsModule012DKKontaktProC0C14rssiAtOneMeterSivp",
+            "moduleName": "DriveKitBeaconUtilsModule",
+            "objc_name": "rssiAtOneMeter",
+            "declAttributes": [
+              "HasInitialValue",
+              "ObjC",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@DriveKitBeaconUtilsModule@objc(cs)DKKontaktProBeacon(im)rssiAtOneMeter",
+                "mangledName": "$s25DriveKitBeaconUtilsModule012DKKontaktProC0C14rssiAtOneMeterSivg",
+                "moduleName": "DriveKitBeaconUtilsModule",
+                "implicit": true,
+                "objc_name": "rssiAtOneMeter",
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@DriveKitBeaconUtilsModule@objc(cs)DKKontaktProBeacon(im)setRssiAtOneMeter:",
+                "mangledName": "$s25DriveKitBeaconUtilsModule012DKKontaktProC0C14rssiAtOneMeterSivs",
+                "moduleName": "DriveKitBeaconUtilsModule",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:25DriveKitBeaconUtilsModule012DKKontaktProC0C14rssiAtOneMeterSivM",
+                "mangledName": "$s25DriveKitBeaconUtilsModule012DKKontaktProC0C14rssiAtOneMeterSivM",
+                "moduleName": "DriveKitBeaconUtilsModule",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DKKontaktProBeacon",
+                "printedName": "DriveKitBeaconUtilsModule.DKKontaktProBeacon",
+                "usr": "c:@M@DriveKitBeaconUtilsModule@objc(cs)DKKontaktProBeacon"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@DriveKitBeaconUtilsModule@objc(cs)DKKontaktProBeacon(im)init",
+            "mangledName": "$s25DriveKitBeaconUtilsModule012DKKontaktProC0CACycfc",
+            "moduleName": "DriveKitBeaconUtilsModule",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@DriveKitBeaconUtilsModule@objc(cs)DKKontaktProBeacon",
+        "mangledName": "$s25DriveKitBeaconUtilsModule012DKKontaktProC0C",
+        "moduleName": "DriveKitBeaconUtilsModule",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "DKBeaconConfig",
+            "printedName": "DKBeaconConfig",
+            "usr": "c:@M@DriveKitBeaconUtilsModule@objc(pl)DKBeaconConfig",
+            "mangledName": "$s25DriveKitBeaconUtilsModule14DKBeaconConfigP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "DKFeasycomBeacon",
+        "printedName": "DKFeasycomBeacon",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rssiAt1m:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DKFeasycomBeacon",
+                "printedName": "DriveKitBeaconUtilsModule.DKFeasycomBeacon",
+                "usr": "c:@M@DriveKitBeaconUtilsModule@objc(cs)DKFeasycomBeacon"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "hasDefaultArg": true,
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:25DriveKitBeaconUtilsModule010DKFeasycomC0C8rssiAt1mACSi_tcfc",
+            "mangledName": "$s25DriveKitBeaconUtilsModule010DKFeasycomC0C8rssiAt1mACSi_tcfc",
+            "moduleName": "DriveKitBeaconUtilsModule",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "serviceUuid",
+            "printedName": "serviceUuid",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@DriveKitBeaconUtilsModule@objc(cs)DKFeasycomBeacon(py)serviceUuid",
+            "mangledName": "$s25DriveKitBeaconUtilsModule010DKFeasycomC0C11serviceUuidSSvp",
+            "moduleName": "DriveKitBeaconUtilsModule",
+            "objc_name": "serviceUuid",
+            "declAttributes": [
+              "HasInitialValue",
+              "ObjC",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@DriveKitBeaconUtilsModule@objc(cs)DKFeasycomBeacon(im)serviceUuid",
+                "mangledName": "$s25DriveKitBeaconUtilsModule010DKFeasycomC0C11serviceUuidSSvg",
+                "moduleName": "DriveKitBeaconUtilsModule",
+                "implicit": true,
+                "objc_name": "serviceUuid",
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@DriveKitBeaconUtilsModule@objc(cs)DKFeasycomBeacon(im)setServiceUuid:",
+                "mangledName": "$s25DriveKitBeaconUtilsModule010DKFeasycomC0C11serviceUuidSSvs",
+                "moduleName": "DriveKitBeaconUtilsModule",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:25DriveKitBeaconUtilsModule010DKFeasycomC0C11serviceUuidSSvM",
+                "mangledName": "$s25DriveKitBeaconUtilsModule010DKFeasycomC0C11serviceUuidSSvM",
+                "moduleName": "DriveKitBeaconUtilsModule",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "batteryLevelPositionInService",
+            "printedName": "batteryLevelPositionInService",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@DriveKitBeaconUtilsModule@objc(cs)DKFeasycomBeacon(py)batteryLevelPositionInService",
+            "mangledName": "$s25DriveKitBeaconUtilsModule010DKFeasycomC0C29batteryLevelPositionInServiceSivp",
+            "moduleName": "DriveKitBeaconUtilsModule",
+            "objc_name": "batteryLevelPositionInService",
+            "declAttributes": [
+              "HasInitialValue",
+              "ObjC",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@DriveKitBeaconUtilsModule@objc(cs)DKFeasycomBeacon(im)batteryLevelPositionInService",
+                "mangledName": "$s25DriveKitBeaconUtilsModule010DKFeasycomC0C29batteryLevelPositionInServiceSivg",
+                "moduleName": "DriveKitBeaconUtilsModule",
+                "implicit": true,
+                "objc_name": "batteryLevelPositionInService",
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@DriveKitBeaconUtilsModule@objc(cs)DKFeasycomBeacon(im)setBatteryLevelPositionInService:",
+                "mangledName": "$s25DriveKitBeaconUtilsModule010DKFeasycomC0C29batteryLevelPositionInServiceSivs",
+                "moduleName": "DriveKitBeaconUtilsModule",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:25DriveKitBeaconUtilsModule010DKFeasycomC0C29batteryLevelPositionInServiceSivM",
+                "mangledName": "$s25DriveKitBeaconUtilsModule010DKFeasycomC0C29batteryLevelPositionInServiceSivM",
+                "moduleName": "DriveKitBeaconUtilsModule",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "rssiAtOneMeter",
+            "printedName": "rssiAtOneMeter",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@DriveKitBeaconUtilsModule@objc(cs)DKFeasycomBeacon(py)rssiAtOneMeter",
+            "mangledName": "$s25DriveKitBeaconUtilsModule010DKFeasycomC0C14rssiAtOneMeterSivp",
+            "moduleName": "DriveKitBeaconUtilsModule",
+            "objc_name": "rssiAtOneMeter",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@DriveKitBeaconUtilsModule@objc(cs)DKFeasycomBeacon(im)rssiAtOneMeter",
+                "mangledName": "$s25DriveKitBeaconUtilsModule010DKFeasycomC0C14rssiAtOneMeterSivg",
+                "moduleName": "DriveKitBeaconUtilsModule",
+                "objc_name": "rssiAtOneMeter",
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DKFeasycomBeacon",
+                "printedName": "DriveKitBeaconUtilsModule.DKFeasycomBeacon",
+                "usr": "c:@M@DriveKitBeaconUtilsModule@objc(cs)DKFeasycomBeacon"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@DriveKitBeaconUtilsModule@objc(cs)DKFeasycomBeacon(im)init",
+            "mangledName": "$s25DriveKitBeaconUtilsModule010DKFeasycomC0CACycfc",
+            "moduleName": "DriveKitBeaconUtilsModule",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@DriveKitBeaconUtilsModule@objc(cs)DKFeasycomBeacon",
+        "mangledName": "$s25DriveKitBeaconUtilsModule010DKFeasycomC0C",
+        "moduleName": "DriveKitBeaconUtilsModule",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC",
+          "RawDocComment"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "DKBeaconConfig",
+            "printedName": "DKBeaconConfig",
+            "usr": "c:@M@DriveKitBeaconUtilsModule@objc(pl)DKBeaconConfig",
+            "mangledName": "$s25DriveKitBeaconUtilsModule14DKBeaconConfigP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "DriveKitBeaconUtilsModule",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "DKBeacon",
+        "printedName": "DKBeacon",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "uniqueId",
+            "printedName": "uniqueId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@DriveKitBeaconUtilsModule@objc(cs)DKBeacon(py)uniqueId",
+            "mangledName": "$s25DriveKitBeaconUtilsModule8DKBeaconC8uniqueIdSSSgvp",
+            "moduleName": "DriveKitBeaconUtilsModule",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@DriveKitBeaconUtilsModule@objc(cs)DKBeacon(im)uniqueId",
+                "mangledName": "$s25DriveKitBeaconUtilsModule8DKBeaconC8uniqueIdSSSgvg",
+                "moduleName": "DriveKitBeaconUtilsModule",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "proximityUuid",
+            "printedName": "proximityUuid",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@DriveKitBeaconUtilsModule@objc(cs)DKBeacon(py)proximityUuid",
+            "mangledName": "$s25DriveKitBeaconUtilsModule8DKBeaconC13proximityUuidSSvp",
+            "moduleName": "DriveKitBeaconUtilsModule",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@DriveKitBeaconUtilsModule@objc(cs)DKBeacon(im)proximityUuid",
+                "mangledName": "$s25DriveKitBeaconUtilsModule8DKBeaconC13proximityUuidSSvg",
+                "moduleName": "DriveKitBeaconUtilsModule",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "major",
+            "printedName": "major",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@DriveKitBeaconUtilsModule@objc(cs)DKBeacon(py)major",
+            "mangledName": "$s25DriveKitBeaconUtilsModule8DKBeaconC5majorSivp",
+            "moduleName": "DriveKitBeaconUtilsModule",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@DriveKitBeaconUtilsModule@objc(cs)DKBeacon(im)major",
+                "mangledName": "$s25DriveKitBeaconUtilsModule8DKBeaconC5majorSivg",
+                "moduleName": "DriveKitBeaconUtilsModule",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "minor",
+            "printedName": "minor",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@DriveKitBeaconUtilsModule@objc(cs)DKBeacon(py)minor",
+            "mangledName": "$s25DriveKitBeaconUtilsModule8DKBeaconC5minorSivp",
+            "moduleName": "DriveKitBeaconUtilsModule",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@DriveKitBeaconUtilsModule@objc(cs)DKBeacon(im)minor",
+                "mangledName": "$s25DriveKitBeaconUtilsModule8DKBeaconC5minorSivg",
+                "moduleName": "DriveKitBeaconUtilsModule",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(uniqueId:proximityUuid:major:minor:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DKBeacon",
+                "printedName": "DriveKitBeaconUtilsModule.DKBeacon",
+                "usr": "c:@M@DriveKitBeaconUtilsModule@objc(cs)DKBeacon"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@DriveKitBeaconUtilsModule@objc(cs)DKBeacon(im)initWithUniqueId:proximityUuid:major:minor:",
+            "mangledName": "$s25DriveKitBeaconUtilsModule8DKBeaconC8uniqueId13proximityUuid5major5minorACSSSg_SSS2itcfc",
+            "moduleName": "DriveKitBeaconUtilsModule",
+            "objc_name": "initWithUniqueId:proximityUuid:major:minor:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DKBeacon",
+                "printedName": "DriveKitBeaconUtilsModule.DKBeacon",
+                "usr": "c:@M@DriveKitBeaconUtilsModule@objc(cs)DKBeacon"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@DriveKitBeaconUtilsModule@objc(cs)DKBeacon(im)init",
+            "mangledName": "$s25DriveKitBeaconUtilsModule8DKBeaconCACycfc",
+            "moduleName": "DriveKitBeaconUtilsModule",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@DriveKitBeaconUtilsModule@objc(cs)DKBeacon",
+        "mangledName": "$s25DriveKitBeaconUtilsModule8DKBeaconC",
+        "moduleName": "DriveKitBeaconUtilsModule",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "DriveKitBeaconUtilsModule",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/vagrant\/git\/drivekit-beacon-utils\/DKBeaconScanner.swift",
+      "kind": "BooleanLiteral",
+      "offset": 835,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/drivekit-beacon-utils\/DKBeaconConfig.swift",
+      "kind": "StringLiteral",
+      "offset": 485,
+      "length": 6,
+      "value": "\"D00D\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/drivekit-beacon-utils\/DKBeaconConfig.swift",
+      "kind": "IntegerLiteral",
+      "offset": 544,
+      "length": 1,
+      "value": "6"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/drivekit-beacon-utils\/DKBeaconConfig.swift",
+      "kind": "IntegerLiteral",
+      "offset": 583,
+      "length": 3,
+      "value": "-81"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/drivekit-beacon-utils\/DKBeaconConfig.swift",
+      "kind": "StringLiteral",
+      "offset": 693,
+      "length": 6,
+      "value": "\"FE6A\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/drivekit-beacon-utils\/DKBeaconConfig.swift",
+      "kind": "IntegerLiteral",
+      "offset": 752,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/drivekit-beacon-utils\/DKBeaconConfig.swift",
+      "kind": "IntegerLiteral",
+      "offset": 791,
+      "length": 3,
+      "value": "-81"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/drivekit-beacon-utils\/DKBeaconConfig.swift",
+      "kind": "IntegerLiteral",
+      "offset": 962,
+      "length": 3,
+      "value": "-65"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/drivekit-beacon-utils\/DKBeaconConfig.swift",
+      "kind": "StringLiteral",
+      "offset": 1046,
+      "length": 6,
+      "value": "\"FFF0\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/drivekit-beacon-utils\/DKBeaconConfig.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1105,
+      "length": 2,
+      "value": "10"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/drivekit-beacon-utils\/DriveKitBeaconUtilsConstants.swift",
+      "kind": "StringLiteral",
+      "offset": 293,
+      "length": 23,
+      "value": "\"DriveKit Beacon Utils\""
+    }
+  ]
+}

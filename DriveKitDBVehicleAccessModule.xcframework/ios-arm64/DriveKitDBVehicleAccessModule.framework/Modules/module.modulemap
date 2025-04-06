@@ -1,0 +1,4 @@
+framework module DriveKitDBVehicleAccessModule {
+  header "DriveKitDBVehicleAccessModule-Swift.h"
+  requires objc
+}

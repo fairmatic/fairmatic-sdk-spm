@@ -1,0 +1,74 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
+// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name DriveKitBeaconUtilsModule
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+import CoreBluetooth
+import CoreLocation
+@_exported import DriveKitBeaconUtilsModule
+import DriveKitCoreModule
+import Foundation
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public enum BeaconInfoResult {
+  case success(batteryLevel: Swift.Int, estimatedDistance: Swift.Double, rssi: Swift.Double, txPower: Swift.Int)
+  case error
+}
+@_inheritsConvenienceInitializers @objc public class DKBeaconScanner : ObjectiveC.NSObject {
+  @objc public static var beaconConfigList: [any DriveKitBeaconUtilsModule.DKBeaconConfig]
+  public typealias BeaconsFound = (_ beacons: [CoreLocation.CLBeacon]) -> Swift.Void
+  public typealias BeaconInfoScanResult = (_ result: DriveKitBeaconUtilsModule.BeaconInfoResult) -> Swift.Void
+  public typealias ObjcBeaconInfoScanResult = (_ batteryLevel: Swift.Int, _ estimatedDistance: Swift.Double, _ rssi: Swift.Double, _ txPower: Swift.Int, _ error: Swift.Bool) -> Swift.Void
+  @objc public func startBeaconScan(beacons: [DriveKitBeaconUtilsModule.DKBeacon], useMajorMinor: Swift.Bool, completion: @escaping DriveKitBeaconUtilsModule.DKBeaconScanner.BeaconsFound)
+  @objc public func stopBeaconScan()
+  public func startBeaconInfoScan(configurations: [any DriveKitBeaconUtilsModule.DKBeaconConfig] = DKBeaconScanner.beaconConfigList, completion: @escaping DriveKitBeaconUtilsModule.DKBeaconScanner.BeaconInfoScanResult)
+  @objc(startBeaconInfoScan:) public func objc_startBeaconInfoScan(completion: @escaping DriveKitBeaconUtilsModule.DKBeaconScanner.ObjcBeaconInfoScanResult)
+  @objc(startBeaconInfoRetrievalWithConfigurations:completion:) public func objc_startBeaconInfoRetrieval(configurations: [any DriveKitBeaconUtilsModule.DKBeaconConfig], completion: @escaping DriveKitBeaconUtilsModule.DKBeaconScanner.ObjcBeaconInfoScanResult)
+  @objc public func stopBeaconInfoScan()
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension DriveKitBeaconUtilsModule.DKBeaconScanner : CoreLocation.CLLocationManagerDelegate {
+  @objc dynamic public func locationManager(_ manager: CoreLocation.CLLocationManager, didRange beacons: [CoreLocation.CLBeacon], satisfying beaconConstraint: CoreLocation.CLBeaconIdentityConstraint)
+}
+extension DriveKitBeaconUtilsModule.DKBeaconScanner : CoreBluetooth.CBCentralManagerDelegate {
+  @objc dynamic public func centralManagerDidUpdateState(_ centralManager: CoreBluetooth.CBCentralManager)
+  @objc dynamic public func centralManager(_ central: CoreBluetooth.CBCentralManager, didDiscover peripheral: CoreBluetooth.CBPeripheral, advertisementData: [Swift.String : Any], rssi RSSI: Foundation.NSNumber)
+}
+@objc public protocol DKBeaconConfig {
+  @objc var serviceUuid: Swift.String { get }
+  @objc var batteryLevelPositionInService: Swift.Int { get }
+  @objc var rssiAtOneMeter: Swift.Int { get }
+}
+@_inheritsConvenienceInitializers @objc public class DKKontaktBeacon : ObjectiveC.NSObject, DriveKitBeaconUtilsModule.DKBeaconConfig {
+  @objc public var serviceUuid: Swift.String
+  @objc public var batteryLevelPositionInService: Swift.Int
+  @objc public var rssiAtOneMeter: Swift.Int
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class DKKontaktProBeacon : ObjectiveC.NSObject, DriveKitBeaconUtilsModule.DKBeaconConfig {
+  @objc public var serviceUuid: Swift.String
+  @objc public var batteryLevelPositionInService: Swift.Int
+  @objc public var rssiAtOneMeter: Swift.Int
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public class DKFeasycomBeacon : ObjectiveC.NSObject, DriveKitBeaconUtilsModule.DKBeaconConfig {
+  public init(rssiAt1m: Swift.Int = -65)
+  @objc public var serviceUuid: Swift.String
+  @objc public var batteryLevelPositionInService: Swift.Int
+  @objc public var rssiAtOneMeter: Swift.Int {
+    @objc get
+  }
+  @objc deinit
+}
+@objc public class DKBeacon : ObjectiveC.NSObject {
+  @objc final public let uniqueId: Swift.String?
+  @objc final public let proximityUuid: Swift.String
+  @objc final public let major: Swift.Int
+  @objc final public let minor: Swift.Int
+  @objc public init(uniqueId: Swift.String?, proximityUuid: Swift.String, major: Swift.Int, minor: Swift.Int)
+  @objc deinit
+}

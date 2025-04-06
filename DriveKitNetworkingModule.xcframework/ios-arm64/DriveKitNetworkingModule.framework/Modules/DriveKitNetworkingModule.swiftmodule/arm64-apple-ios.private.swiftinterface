@@ -1,0 +1,412 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name DriveKitNetworkingModule
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+import Foundation
+import MobileCoreServices
+import Swift
+import UniformTypeIdentifiers
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public enum DKHttpMethod : Swift.String {
+  case get
+  case post
+  case put
+  case delete
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum DQNetworking {
+  public static func getRequest(headers: [Swift.String : Swift.String], urlString: Swift.String, completionHandler: @escaping (Swift.Bool, DriveKitNetworkingModule.ResponseData?, [Swift.AnyHashable : Any]?) -> Swift.Void)
+  public static func postRequest(headers: [Swift.String : Swift.String], urlString: Swift.String, data: [Swift.String : Any], completionHandler: @escaping (Swift.Bool, DriveKitNetworkingModule.ResponseData?, [Swift.AnyHashable : Any]?) -> Swift.Void)
+  public static func postRequest(headers: [Swift.String : Swift.String], urlString: Swift.String, data: [Any?], completionHandler: @escaping (Swift.Bool, DriveKitNetworkingModule.ResponseData?, [Swift.AnyHashable : Any]?) -> Swift.Void)
+  public static func putRequest(headers: [Swift.String : Swift.String], urlString: Swift.String, data: [Swift.String : Any], completionHandler: @escaping (Swift.Bool, DriveKitNetworkingModule.ResponseData?, [Swift.AnyHashable : Any]?) -> Swift.Void)
+  public static func deleteRequest(headers: [Swift.String : Swift.String], urlString: Swift.String, data: [Swift.String : Any]?, completionHandler: @escaping (Swift.Bool, DriveKitNetworkingModule.ResponseData?, [Swift.AnyHashable : Any]?) -> Swift.Void)
+  public static func arrayToJson<T>(data: [T]) -> [Any?] where T : DriveKitNetworkingModule.DriveKitModel
+  public static func jsonToArray<T>(jArray: [DriveKitNetworkingModule.SwiftyJSON]) -> [T] where T : DriveKitNetworkingModule.DriveKitModel
+  public static func jsonToObject<T>(json: DriveKitNetworkingModule.SwiftyJSON) -> T where T : DriveKitNetworkingModule.DriveKitModel
+  public static func jsonToDoubleArray(_ values: DriveKitNetworkingModule.SwiftyJSON) -> [Swift.Double]
+  public static func jsonToIntArray(_ values: DriveKitNetworkingModule.SwiftyJSON) -> [Swift.Int]
+}
+@_hasMissingDesignatedInitializers public class ResponseData {
+  public var statusCode: Swift.Int
+  public var result: DriveKitNetworkingModule.SwiftyJSON
+  public func convertToArray<T>() -> [T] where T : DriveKitNetworkingModule.DriveKitModel
+  public func convertToObject<T>() -> T where T : DriveKitNetworkingModule.DriveKitModel
+  @objc deinit
+}
+public class DriveKitRequest {
+  public init(method: Swift.String, url: Swift.String, identifier: Swift.String, body: Foundation.Data?, delegate: any DriveKitNetworkingModule.DriveKitRequestDelegate, requestHeaders: [Swift.String : Swift.String])
+  public func cancel()
+  @objc deinit
+}
+public protocol DriveKitRequestDelegate {
+  func onResponse(identifier: Swift.String, data: Foundation.Data?, response: Foundation.HTTPURLResponse?)
+  func onErrorResponse(identifier: Swift.String, error: DriveKitNetworkingModule.DKRequestError, message: Swift.String)
+}
+public enum DKRequestError {
+  case wrongUrl
+  case noNetwork
+  public static func == (a: DriveKitNetworkingModule.DKRequestError, b: DriveKitNetworkingModule.DKRequestError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol DriveKitModel {
+  func toJSON() -> [Swift.String : Any]
+  init(json: DriveKitNetworkingModule.SwiftyJSON)
+}
+public class MultipartRequest {
+  public init(url: Swift.String, identifier: Swift.String, parameters: [Swift.String : Swift.String]? = nil, files: [Swift.String : Foundation.URL], delegate: any DriveKitNetworkingModule.DriveKitRequestDelegate, requestHeaders: [Swift.String : Swift.String])
+  public func cancel()
+  @objc deinit
+}
+public let ErrorDomain: Swift.String
+public let ErrorUnsupportedType: Swift.Int
+public let ErrorIndexOutOfBounds: Swift.Int
+public let ErrorWrongType: Swift.Int
+public let ErrorNotExist: Swift.Int
+public let ErrorInvalidJSON: Swift.Int
+public enum Type : Swift.Int {
+  case number
+  case string
+  case bool
+  case array
+  case dictionary
+  case null
+  case unknown
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public struct SwiftyJSON {
+  public init(data: Foundation.Data, options opt: Foundation.JSONSerialization.ReadingOptions = .allowFragments, error: Foundation.NSErrorPointer = nil)
+  public init(_ object: Any)
+  public init(parseJSON jsonString: Swift.String)
+  @available(*, deprecated, message: "Use instead `init(parseJSON: )`")
+  public static func parse(_ json: Swift.String) -> DriveKitNetworkingModule.SwiftyJSON
+  public mutating func merge(with other: DriveKitNetworkingModule.SwiftyJSON) throws
+  public func merged(with other: DriveKitNetworkingModule.SwiftyJSON) throws -> DriveKitNetworkingModule.SwiftyJSON
+  public var object: Any {
+    get
+    set
+  }
+  public var type: DriveKitNetworkingModule.`Type` {
+    get
+  }
+  public var error: Foundation.NSError? {
+    get
+  }
+  @available(*, unavailable, renamed: "null")
+  public static var nullJSON: DriveKitNetworkingModule.SwiftyJSON {
+    get
+  }
+  public static var null: DriveKitNetworkingModule.SwiftyJSON {
+    get
+  }
+}
+public enum Index<T> : Swift.Comparable {
+  case array(Swift.Int)
+  case dictionary(Swift.DictionaryIndex<Swift.String, T>)
+  case null
+  public static func == (lhs: DriveKitNetworkingModule.Index<T>, rhs: DriveKitNetworkingModule.Index<T>) -> Swift.Bool
+  public static func < (lhs: DriveKitNetworkingModule.Index<T>, rhs: DriveKitNetworkingModule.Index<T>) -> Swift.Bool
+}
+public typealias JSONIndex = DriveKitNetworkingModule.Index<DriveKitNetworkingModule.SwiftyJSON>
+public typealias JSONRawIndex = DriveKitNetworkingModule.Index<Any>
+extension DriveKitNetworkingModule.SwiftyJSON : Swift.Collection {
+  public typealias Index = DriveKitNetworkingModule.JSONRawIndex
+  public var startIndex: DriveKitNetworkingModule.SwiftyJSON.Index {
+    get
+  }
+  public var endIndex: DriveKitNetworkingModule.SwiftyJSON.Index {
+    get
+  }
+  public func index(after i: DriveKitNetworkingModule.SwiftyJSON.Index) -> DriveKitNetworkingModule.SwiftyJSON.Index
+  public subscript(position: DriveKitNetworkingModule.SwiftyJSON.Index) -> (Swift.String, DriveKitNetworkingModule.SwiftyJSON) {
+    get
+  }
+  public typealias Element = (Swift.String, DriveKitNetworkingModule.SwiftyJSON)
+  public typealias Indices = Swift.DefaultIndices<DriveKitNetworkingModule.SwiftyJSON>
+  public typealias Iterator = Swift.IndexingIterator<DriveKitNetworkingModule.SwiftyJSON>
+  public typealias SubSequence = Swift.Slice<DriveKitNetworkingModule.SwiftyJSON>
+}
+public enum JSONKey {
+  case index(Swift.Int)
+  case key(Swift.String)
+}
+public protocol JSONSubscriptType {
+  var jsonKey: DriveKitNetworkingModule.JSONKey { get }
+}
+extension Swift.Int : DriveKitNetworkingModule.JSONSubscriptType {
+  public var jsonKey: DriveKitNetworkingModule.JSONKey {
+    get
+  }
+}
+extension Swift.String : DriveKitNetworkingModule.JSONSubscriptType {
+  public var jsonKey: DriveKitNetworkingModule.JSONKey {
+    get
+  }
+}
+extension DriveKitNetworkingModule.SwiftyJSON {
+  public subscript(path: [any DriveKitNetworkingModule.JSONSubscriptType]) -> DriveKitNetworkingModule.SwiftyJSON {
+    get
+    set
+  }
+  public subscript(path: any DriveKitNetworkingModule.JSONSubscriptType...) -> DriveKitNetworkingModule.SwiftyJSON {
+    get
+    set
+  }
+}
+extension DriveKitNetworkingModule.SwiftyJSON : Swift.ExpressibleByStringLiteral {
+  public init(stringLiteral value: Swift.StringLiteralType)
+  public init(extendedGraphemeClusterLiteral value: Swift.StringLiteralType)
+  public init(unicodeScalarLiteral value: Swift.StringLiteralType)
+  public typealias ExtendedGraphemeClusterLiteralType = Swift.StringLiteralType
+  public typealias StringLiteralType = Swift.StringLiteralType
+  public typealias UnicodeScalarLiteralType = Swift.StringLiteralType
+}
+extension DriveKitNetworkingModule.SwiftyJSON : Swift.ExpressibleByIntegerLiteral {
+  public init(integerLiteral value: Swift.IntegerLiteralType)
+  public typealias IntegerLiteralType = Swift.IntegerLiteralType
+}
+extension DriveKitNetworkingModule.SwiftyJSON : Swift.ExpressibleByBooleanLiteral {
+  public init(booleanLiteral value: Swift.BooleanLiteralType)
+  public typealias BooleanLiteralType = Swift.BooleanLiteralType
+}
+extension DriveKitNetworkingModule.SwiftyJSON : Swift.ExpressibleByFloatLiteral {
+  public init(floatLiteral value: Swift.FloatLiteralType)
+  public typealias FloatLiteralType = Swift.FloatLiteralType
+}
+extension DriveKitNetworkingModule.SwiftyJSON : Swift.ExpressibleByDictionaryLiteral {
+  public init(dictionaryLiteral elements: (Swift.String, Any)...)
+  public init(dictionaryLiteral elements: [(Swift.String, Any)])
+  public typealias Key = Swift.String
+  public typealias Value = Any
+}
+extension DriveKitNetworkingModule.SwiftyJSON : Swift.ExpressibleByArrayLiteral {
+  public init(arrayLiteral elements: Any...)
+  public typealias ArrayLiteralElement = Any
+}
+extension DriveKitNetworkingModule.SwiftyJSON : Swift.ExpressibleByNilLiteral {
+  @available(*, deprecated, message: "use JSON.null instead. Will be removed in future versions")
+  public init(nilLiteral: ())
+}
+extension DriveKitNetworkingModule.SwiftyJSON : Swift.RawRepresentable {
+  public init?(rawValue: Any)
+  public var rawValue: Any {
+    get
+  }
+  public func rawData(options opt: Foundation.JSONSerialization.WritingOptions = JSONSerialization.WritingOptions(rawValue: 0)) throws -> Foundation.Data
+  public func rawString(_ encoding: Swift.String.Encoding = .utf8, options opt: Foundation.JSONSerialization.WritingOptions = .prettyPrinted) -> Swift.String?
+  public func rawString(_ options: [DriveKitNetworkingModule.writtingOptionsKeys : Any]) -> Swift.String?
+  public typealias RawValue = Any
+}
+extension DriveKitNetworkingModule.SwiftyJSON : Swift.CustomStringConvertible, Swift.CustomDebugStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+extension DriveKitNetworkingModule.SwiftyJSON {
+  public var array: [DriveKitNetworkingModule.SwiftyJSON]? {
+    get
+  }
+  public var arrayValue: [DriveKitNetworkingModule.SwiftyJSON] {
+    get
+  }
+  public var arrayObject: [Any]? {
+    get
+    set
+  }
+}
+extension DriveKitNetworkingModule.SwiftyJSON {
+  public var dictionary: [Swift.String : DriveKitNetworkingModule.SwiftyJSON]? {
+    get
+  }
+  public var dictionaryValue: [Swift.String : DriveKitNetworkingModule.SwiftyJSON] {
+    get
+  }
+  public var dictionaryObject: [Swift.String : Any]? {
+    get
+    set
+  }
+}
+extension DriveKitNetworkingModule.SwiftyJSON {
+  public var bool: Swift.Bool? {
+    get
+    set
+  }
+  public var boolValue: Swift.Bool {
+    get
+    set
+  }
+}
+extension DriveKitNetworkingModule.SwiftyJSON {
+  public var string: Swift.String? {
+    get
+    set
+  }
+  public var stringValue: Swift.String {
+    get
+    set
+  }
+}
+extension DriveKitNetworkingModule.SwiftyJSON {
+  public var number: Foundation.NSNumber? {
+    get
+    set
+  }
+  public var numberValue: Foundation.NSNumber {
+    get
+    set
+  }
+}
+extension DriveKitNetworkingModule.SwiftyJSON {
+  public var null: Foundation.NSNull? {
+    get
+    set
+  }
+  public func exists() -> Swift.Bool
+}
+extension DriveKitNetworkingModule.SwiftyJSON {
+  public var url: Foundation.URL? {
+    get
+    set
+  }
+}
+extension DriveKitNetworkingModule.SwiftyJSON {
+  public var double: Swift.Double? {
+    get
+    set
+  }
+  public var doubleValue: Swift.Double {
+    get
+    set
+  }
+  public var float: Swift.Float? {
+    get
+    set
+  }
+  public var floatValue: Swift.Float {
+    get
+    set
+  }
+  public var int: Swift.Int? {
+    get
+    set
+  }
+  public var intValue: Swift.Int {
+    get
+    set
+  }
+  public var uInt: Swift.UInt? {
+    get
+    set
+  }
+  public var uIntValue: Swift.UInt {
+    get
+    set
+  }
+  public var int8: Swift.Int8? {
+    get
+    set
+  }
+  public var int8Value: Swift.Int8 {
+    get
+    set
+  }
+  public var uInt8: Swift.UInt8? {
+    get
+    set
+  }
+  public var uInt8Value: Swift.UInt8 {
+    get
+    set
+  }
+  public var int16: Swift.Int16? {
+    get
+    set
+  }
+  public var int16Value: Swift.Int16 {
+    get
+    set
+  }
+  public var uInt16: Swift.UInt16? {
+    get
+    set
+  }
+  public var uInt16Value: Swift.UInt16 {
+    get
+    set
+  }
+  public var int32: Swift.Int32? {
+    get
+    set
+  }
+  public var int32Value: Swift.Int32 {
+    get
+    set
+  }
+  public var uInt32: Swift.UInt32? {
+    get
+    set
+  }
+  public var uInt32Value: Swift.UInt32 {
+    get
+    set
+  }
+  public var int64: Swift.Int64? {
+    get
+    set
+  }
+  public var int64Value: Swift.Int64 {
+    get
+    set
+  }
+  public var uInt64: Swift.UInt64? {
+    get
+    set
+  }
+  public var uInt64Value: Swift.UInt64 {
+    get
+    set
+  }
+}
+extension DriveKitNetworkingModule.SwiftyJSON : Swift.Comparable {
+}
+public func == (lhs: DriveKitNetworkingModule.SwiftyJSON, rhs: DriveKitNetworkingModule.SwiftyJSON) -> Swift.Bool
+public func <= (lhs: DriveKitNetworkingModule.SwiftyJSON, rhs: DriveKitNetworkingModule.SwiftyJSON) -> Swift.Bool
+public func >= (lhs: DriveKitNetworkingModule.SwiftyJSON, rhs: DriveKitNetworkingModule.SwiftyJSON) -> Swift.Bool
+public func > (lhs: DriveKitNetworkingModule.SwiftyJSON, rhs: DriveKitNetworkingModule.SwiftyJSON) -> Swift.Bool
+public func < (lhs: DriveKitNetworkingModule.SwiftyJSON, rhs: DriveKitNetworkingModule.SwiftyJSON) -> Swift.Bool
+public enum writtingOptionsKeys {
+  case jsonSerialization
+  case castNilToNSNull
+  case maxObjextDepth
+  case encoding
+  public static func == (a: DriveKitNetworkingModule.writtingOptionsKeys, b: DriveKitNetworkingModule.writtingOptionsKeys) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension DriveKitNetworkingModule.DKHttpMethod : Swift.Equatable {}
+extension DriveKitNetworkingModule.DKHttpMethod : Swift.Hashable {}
+extension DriveKitNetworkingModule.DKHttpMethod : Swift.RawRepresentable {}
+extension DriveKitNetworkingModule.DKRequestError : Swift.Equatable {}
+extension DriveKitNetworkingModule.DKRequestError : Swift.Hashable {}
+extension DriveKitNetworkingModule.`Type` : Swift.Equatable {}
+extension DriveKitNetworkingModule.`Type` : Swift.Hashable {}
+extension DriveKitNetworkingModule.`Type` : Swift.RawRepresentable {}
+extension DriveKitNetworkingModule.writtingOptionsKeys : Swift.Equatable {}
+extension DriveKitNetworkingModule.writtingOptionsKeys : Swift.Hashable {}
