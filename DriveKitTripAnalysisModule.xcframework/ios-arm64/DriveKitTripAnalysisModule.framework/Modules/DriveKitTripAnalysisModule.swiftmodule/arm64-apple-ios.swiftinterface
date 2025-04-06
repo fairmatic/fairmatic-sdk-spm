@@ -1,0 +1,1113 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name DriveKitTripAnalysisModule
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+import AVFoundation
+import CallKit
+import CoreLocation
+import CoreMotion
+import DriveKitBeaconUtilsModule
+import DriveKitCoreModule
+import DriveKitDBTripAccessModule
+import DriveKitDBVehicleAccessModule
+import DriveKitNetworkingModule
+import Foundation
+import Swift
+import SystemConfiguration
+import UIKit
+import UserNotifications
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public class EcoDriving : DriveKitNetworkingModule.DriveKitModel {
+  public var score: Swift.Double
+  public var scoreAccel: Swift.Double
+  public var scoreMain: Swift.Double
+  public var scoreDecel: Swift.Double
+  public var stdDevAccel: Swift.Double
+  public var stdDevMain: Swift.Double
+  public var stdDevDecel: Swift.Double
+  public var energyClass: Swift.Int
+  required public init(json: DriveKitNetworkingModule.SwiftyJSON)
+  public func toJSON() -> [Swift.String : Any]
+  @objc deinit
+}
+public class Safety : DriveKitNetworkingModule.DriveKitModel {
+  public var nbAdh: Swift.Int
+  public var nbAccel: Swift.Int
+  public var nbDecel: Swift.Int
+  public var nbAdhCrit: Swift.Int
+  public var nbAccelCrit: Swift.Int
+  public var nbDecelCrit: Swift.Int
+  public var safetyScore: Swift.Double
+  required public init(json: DriveKitNetworkingModule.SwiftyJSON)
+  public func toJSON() -> [Swift.String : Any]
+  @objc deinit
+}
+@objc public enum TripResponseError : Swift.Int {
+  case noAccountSet = 10
+  case noRouteObjectFound = 13
+  case invalidRouteDefinition = 14
+  case noVelocityData = 15
+  case invalidSamplingPeriod = 19
+  case invalidCustomerId = 21
+  case noDateFound = 23
+  case maxDailyRequestNumberReached = 24
+  case dataError = 26
+  case invalidRouteVectors = 27
+  case missingBeacon = 29
+  case invalidBeacon = 30
+  case duplicateTrip = 31
+  case insufficientGpsData = 33
+  case userDisabled = 34
+  case invalidUser = 35
+  case invalidGpsData = 36
+  case invalidTrip = 37
+  case accountLimitReached = 38
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers @objc public class DKCrashInfo : ObjectiveC.NSObject, Swift.Codable {
+  final public let crashId: Swift.String
+  final public let date: Foundation.Date
+  final public let probability: Swift.Int
+  final public let latitude: Swift.Double
+  final public let longitude: Swift.Double
+  final public let velocity: Swift.Double
+  final public let crashStatus: DriveKitTripAnalysisModule.DKCrashStatus
+  final public let userLocationUrl: Swift.String?
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@objc public enum DKCrashStatus : Swift.Int, Swift.Codable {
+  case unconfirmed
+  case confirmed
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class ItineraryData : DriveKitNetworkingModule.DriveKitModel {
+  public var startDate: Swift.String?
+  public var endDate: Swift.String?
+  public var departureCity: Swift.String?
+  public var arrivalCity: Swift.String?
+  public var departureAddress: Swift.String?
+  public var arrivalAddress: Swift.String?
+  public func toJSON() -> [Swift.String : Any]
+  required public init(json: DriveKitNetworkingModule.SwiftyJSON)
+  @objc deinit
+}
+public class EcoDrivingContext : DriveKitNetworkingModule.DriveKitModel {
+  public var contextId: Swift.Int
+  public var distance: Swift.Double
+  public var duration: Swift.Double
+  public var efficiencyScore: Swift.Double
+  public var scoreAccel: Swift.Double
+  public var scoreMain: Swift.Double
+  public var scoreDecel: Swift.Double
+  required public init(json: DriveKitNetworkingModule.SwiftyJSON)
+  public func toJSON() -> [Swift.String : Any]
+  @objc deinit
+}
+public struct CallEvent : DriveKitNetworkingModule.DriveKitModel {
+  public let time: Swift.Double
+  public let latitude: Swift.Double
+  public let longitude: Swift.Double
+  public let velocity: Swift.Double
+  public let heading: Swift.Double
+  public let elevation: Swift.Double
+  public let distance: Swift.Double
+  public let type: Swift.Int
+  public let duration: Swift.Int
+  public let audioSystem: Swift.String
+  public let callType: Swift.String
+  public let index: Swift.Int
+  public let forbidden: Swift.Bool
+  public init(json: DriveKitNetworkingModule.SwiftyJSON)
+  public func toJSON() -> [Swift.String : Any]
+}
+@objc public enum DKWorkingHoursSyncStatus : Swift.Int {
+  case success, cacheOnly, failed
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum DKWorkingHoursUpdateStatus : Swift.Int {
+  case success, failed, invalidDayOfWeek, invalidStartOrEndTime, startTimeGreaterThanEndTime, duplicatedDay, invalidDayCount
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public class Pollutants : DriveKitNetworkingModule.DriveKitModel {
+  public var co: Swift.Double
+  public var hc: Swift.Double
+  public var nox: Swift.Double
+  public var soot: Swift.Double
+  required public init(json: DriveKitNetworkingModule.SwiftyJSON)
+  public func toJSON() -> [Swift.String : Any]
+  @objc deinit
+}
+public class AdvancedSafety : DriveKitNetworkingModule.DriveKitModel {
+  public var safetyContext: [DriveKitTripAnalysisModule.SafetyContext]?
+  required public init(json: DriveKitNetworkingModule.SwiftyJSON)
+  public func toJSON() -> [Swift.String : Any]
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class BeaconData : ObjectiveC.NSObject, DriveKitNetworkingModule.DriveKitModel {
+  final public let proximityUuid: Swift.String
+  final public let major: Swift.Int
+  final public let minor: Swift.Int
+  @objc public init(proximityUuid: Swift.String, major: Swift.Int, minor: Swift.Int)
+  @objc public init(proximityUuid: Swift.String, major: Swift.Int)
+  @objc public init(proximityUuid: Swift.String)
+  required public init(json: DriveKitNetworkingModule.SwiftyJSON)
+  public func toJSON() -> [Swift.String : Any]
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc public class TripResponseStatus : ObjectiveC.NSObject {
+  @objc final public let status: DriveKitTripAnalysisModule.TripResponseStatusType
+  @objc final public let itinId: Swift.String?
+  @objc final public let localTripId: Swift.String?
+  @objc final public let hasSafetyAndEcoDrivingScore: Swift.Bool
+  final public let info: [DriveKitTripAnalysisModule.TripResponseInfo]
+  final public let error: DriveKitTripAnalysisModule.TripResponseError?
+  @objc(info) public var objc_info: [Swift.Int] {
+    @objc get
+  }
+  @objc(error) public var objc_error: Swift.Int {
+    @objc get
+  }
+  @objc(getTripObject) public func getTrip() -> DriveKitDBTripAccessModule.DKTrip?
+  public func toResult() -> DriveKitTripAnalysisModule.TripResult
+  @objc deinit
+}
+@objc public enum TripResponseStatusType : Swift.Int {
+  case tripValid
+  case tripError
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum TripResult {
+  case tripValid(itinId: Swift.String, localTripId: Swift.String?, hasSafetyAndEcoDrivingScore: Swift.Bool, info: [DriveKitTripAnalysisModule.TripResponseInfo])
+  case tripError(localTripId: Swift.String?, error: DriveKitTripAnalysisModule.TripResponseError?)
+}
+public struct Call : DriveKitNetworkingModule.DriveKitModel {
+  public let id: Swift.Int
+  public let start: Swift.Double
+  public let end: Swift.Double
+  public let durationS: Swift.Int
+  public let duration: Swift.Int
+  public let distanceM: Swift.Int
+  public let distance: Swift.Int
+  public let status: Swift.String
+  public let audioSystem: Swift.String
+  public let audioInput: Swift.String?
+  public let audioOutput: Swift.String?
+  public let audioName: Swift.String?
+  public let bluetoothClass: Swift.Int
+  public let forbidden: Swift.Bool
+  public init(json: DriveKitNetworkingModule.SwiftyJSON)
+  public func toJSON() -> [Swift.String : Any]
+}
+public class SafetyContext : DriveKitNetworkingModule.DriveKitModel {
+  public var contextId: Swift.Int
+  public var distance: Swift.Double
+  public var duration: Swift.Double
+  public var nbAdh: Swift.Int
+  public var nbAccel: Swift.Int
+  public var nbDecel: Swift.Int
+  public var nbAdhCrit: Swift.Int
+  public var nbAccelCrit: Swift.Int
+  public var nbDecelCrit: Swift.Int
+  public var safetyScore: Swift.Double
+  required public init(json: DriveKitNetworkingModule.SwiftyJSON)
+  public func toJSON() -> [Swift.String : Any]
+  @objc deinit
+}
+@objc public protocol CrashFeedbackDelegate {
+  @objc func didUpdateProgress(remainingSeconds: Foundation.TimeInterval, totalSeconds: Foundation.TimeInterval)
+  @objc func timeoutReached()
+  @objc func confirmationTimeoutReached()
+}
+public class BluetoothDevicesList : DriveKitNetworkingModule.DriveKitModel {
+  public var bluetoothDevices: [DriveKitTripAnalysisModule.BluetoothData]
+  public init(devices: [DriveKitTripAnalysisModule.BluetoothData])
+  public func toJSON() -> [Swift.String : Any]
+  required public init(json: DriveKitNetworkingModule.SwiftyJSON)
+  @objc deinit
+}
+@objc public class DKCrashFeedbackConfig : ObjectiveC.NSObject {
+  final public let crashVelocityThreshold: Swift.Double
+  final public let notification: DriveKitTripAnalysisModule.DKCrashFeedbackNotification
+  public init(notification: DriveKitTripAnalysisModule.DKCrashFeedbackNotification, crashVelocityThreshold: Swift.Double = 0)
+  @objc deinit
+}
+@objc public class DKCrashFeedbackNotification : ObjectiveC.NSObject {
+  final public let title: Swift.String
+  final public let message: Swift.String
+  final public let crashAlert: DriveKitTripAnalysisModule.DKCrashAlert
+  public init(title: Swift.String, message: Swift.String, crashAlert: DriveKitTripAnalysisModule.DKCrashAlert = .silence)
+  @objc deinit
+}
+@objc public enum DKCrashAlert : Swift.Int {
+  case silence
+  case vibration
+  case soundAndVibration
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public class FuelEstimation : DriveKitNetworkingModule.DriveKitModel {
+  public var co2Mass: Swift.Double
+  public var co2Emission: Swift.Double
+  public var fuelVolume: Swift.Double
+  public var fuelConsumption: Swift.Double
+  public var idleFuelVolume: Swift.Double
+  public var idleFuelPercentage: Swift.Double
+  public var idleFuelConsumption: Swift.Double
+  public var idleCo2Emission: Swift.Double
+  public var idleCo2Mass: Swift.Double
+  public var engineTempStatus: Swift.Bool
+  public var coldFuelVolume: Swift.Double
+  required public init(json: DriveKitNetworkingModule.SwiftyJSON)
+  public func toJSON() -> [Swift.String : Any]
+  @objc deinit
+}
+public class SafetyEvent : DriveKitNetworkingModule.DriveKitModel {
+  public var time: Swift.Double
+  public var longitude: Swift.Double
+  public var latitude: Swift.Double
+  public var velocity: Swift.Double
+  public var heading: Swift.Double
+  public var elevation: Swift.Double
+  public var distance: Swift.Double
+  public var type: Swift.Int
+  public var level: Swift.Int
+  public var value: Swift.Double
+  required public init(json: DriveKitNetworkingModule.SwiftyJSON)
+  public func toJSON() -> [Swift.String : Any]
+  @objc deinit
+}
+@available(*, deprecated, message: "This class will be removed in a future version, at the end of 2025.")
+@objc public enum CancelTrip : Swift.Int {
+  case user = 0, highspeed = 1, noSpeed = 2, noBeacon = 3, noBluetoothDevice = 8, missingConfiguration = 4, noGPSData = 5, reset = 6, beaconNoSpeed = 7, bluetoothDeviceNoSpeed = 9
+  public init?(rawValue: Swift.Int)
+  @available(*, deprecated, message: "This class will be removed in a future version, at the end of 2025.")
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public protocol DKTripRecordingState {
+  @objc var localTripId: Swift.String { get }
+  @objc var startMode: DriveKitTripAnalysisModule.StartMode { get }
+  @objc var recordingStartDate: Foundation.Date { get }
+}
+@objc public protocol DKTripRecordingStartedState : DriveKitTripAnalysisModule.DKTripRecordingState {
+}
+@objc public protocol DKTripRecordingConfirmedState : DriveKitTripAnalysisModule.DKTripRecordingState {
+  @objc var recordingConfirmationDate: Foundation.Date { get }
+}
+@objc public protocol DKTripRecordingCanceledState : DriveKitTripAnalysisModule.DKTripRecordingState {
+  @objc var cancelationReason: DriveKitTripAnalysisModule.DKTripCancelationReason { get }
+  @objc var recordingConfirmationDate: Foundation.Date? { get }
+}
+@objc public protocol DKTripRecordingFinishedState : DriveKitTripAnalysisModule.DKTripRecordingState {
+  @objc var recordingConfirmationDate: Foundation.Date { get }
+  @objc var recordingEndDate: Foundation.Date { get }
+}
+@objc public enum DKTripCancelationReason : Swift.Int {
+  case user
+  case highSpeed
+  case noSpeed
+  case noBeacon
+  case noBluetoothDevice
+  case missingConfiguration
+  case noLocationData
+  case reset
+  case beaconNoSpeed
+  case bluetoothDeviceNoSpeed
+  case appKilled
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public class FuelEstimationContext : DriveKitNetworkingModule.DriveKitModel {
+  public var co2Emission: Swift.Double
+  public var co2Mass: Swift.Double
+  public var contextId: Swift.Int
+  public var distance: Swift.Double
+  public var duration: Swift.Double
+  public var fuelConsumption: Swift.Double
+  public var fuelVolume: Swift.Double
+  required public init(json: DriveKitNetworkingModule.SwiftyJSON)
+  public func toJSON() -> [Swift.String : Any]
+  @objc deinit
+}
+@objc public protocol DKTripSharingLink {
+  @objc var url: Swift.String { get }
+  @objc var code: Swift.String { get }
+  @objc var startDate: Foundation.Date { get }
+  @objc var endDate: Foundation.Date { get }
+}
+@available(*, deprecated, message: "This class will be removed in a future version, at the end of 2025.")
+@objc public class PostGenericResponse : ObjectiveC.NSObject, DriveKitNetworkingModule.DriveKitModel {
+  @objc final public let status: Swift.Bool
+  @objc public var itinId: Swift.String?
+  @objc public var endDate: Swift.String
+  public var userId: Swift.String?
+  public var vehicleId: Swift.String? {
+    get
+  }
+  public var comments: [DriveKitTripAnalysisModule.Comment]?
+  public var itineraryData: DriveKitTripAnalysisModule.ItineraryData?
+  public var itineraryStatistics: DriveKitTripAnalysisModule.ItineraryStatistics?
+  public var ecoDriving: DriveKitTripAnalysisModule.EcoDriving?
+  public var fuelEstimation: DriveKitTripAnalysisModule.FuelEstimation?
+  public var safety: DriveKitTripAnalysisModule.Safety?
+  public var logbook: DriveKitTripAnalysisModule.Logbook?
+  public var pollutants: DriveKitTripAnalysisModule.Pollutants?
+  public var tireWear: DriveKitTripAnalysisModule.TireWear?
+  public var brakeWear: DriveKitTripAnalysisModule.BrakeWear?
+  public var safetyEvents: [DriveKitTripAnalysisModule.SafetyEvent]?
+  public var tripAdvicesData: [DriveKitTripAnalysisModule.TripAdviceData]?
+  public var driverDistraction: DriveKitTripAnalysisModule.DriverDistraction?
+  public var advancedEcoDriving: DriveKitTripAnalysisModule.AdvancedEcoDriving?
+  public var advancedFuelEstimation: DriveKitTripAnalysisModule.AdvancedFuelEstimation?
+  public var advancedSafety: DriveKitTripAnalysisModule.AdvancedSafety?
+  public var callEvents: [DriveKitTripAnalysisModule.CallEvent]? {
+    get
+  }
+  public var speedingEvents: [DriveKitTripAnalysisModule.SpeedingEvent]? {
+    get
+  }
+  public var speedingStatistics: DriveKitTripAnalysisModule.SpeedingStatistics? {
+    get
+  }
+  public var energyEstimation: DriveKitTripAnalysisModule.DKEnergyEstimation? {
+    get
+  }
+  public var advancedEnergyEstimation: [DriveKitTripAnalysisModule.DKAdvancedEnergyEstimation]? {
+    get
+  }
+  public func toJSON() -> [Swift.String : Any]
+  required public init(json: DriveKitNetworkingModule.SwiftyJSON)
+  @objc deinit
+}
+public class DKEnergyEstimation : DriveKitNetworkingModule.DriveKitModel {
+  public var energy: Swift.Double
+  public var energyConsumption: Swift.Double
+  public var energyOpti: Swift.Double
+  public var energyOptiConsumption: Swift.Double
+  required public init(json: DriveKitNetworkingModule.SwiftyJSON)
+  public func toJSON() -> [Swift.String : Any]
+  @objc deinit
+}
+public class AdvancedEcoDriving : DriveKitNetworkingModule.DriveKitModel {
+  public var ecoDrivingContext: [DriveKitTripAnalysisModule.EcoDrivingContext]?
+  required public init(json: DriveKitNetworkingModule.SwiftyJSON)
+  public func toJSON() -> [Swift.String : Any]
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class Account : DriveKitNetworkingModule.DriveKitModel {
+  public func toJSON() -> [Swift.String : Any]
+  public func toJSON(secure: Swift.Bool) -> [Swift.String : Any]
+  required public init(json: DriveKitNetworkingModule.SwiftyJSON)
+  @objc deinit
+}
+public struct SpeedingStatistics : DriveKitNetworkingModule.DriveKitModel {
+  public var distance: Swift.Int
+  public var duration: Swift.Int
+  public var speedingDistance: Swift.Int
+  public var speedingDuration: Swift.Int
+  public var score: Swift.Double
+  public var speedLimitContexts: [DriveKitTripAnalysisModule.SpeedLimitContext]
+  public init(json: DriveKitNetworkingModule.SwiftyJSON)
+  public func toJSON() -> [Swift.String : Any]
+}
+public class TripAdviceData : DriveKitNetworkingModule.DriveKitModel {
+  public var title: Swift.String?
+  public var message: Swift.String?
+  public var messageId: Swift.String?
+  public var id: Swift.String?
+  public var theme: Swift.String?
+  required public init(json: DriveKitNetworkingModule.SwiftyJSON)
+  public func toJSON() -> [Swift.String : Any]
+  @objc deinit
+}
+public class DriverDistraction : DriveKitNetworkingModule.DriveKitModel {
+  public var nbUnlock: Swift.Int
+  public var durationUnlock: Swift.Double
+  public var durationPercentUnlock: Swift.Double
+  public var distanceUnlock: Swift.Double
+  public var distancePercentUnlock: Swift.Double
+  public var score: Swift.Double
+  public var scoreUnlock: Swift.Double?
+  public var scoreCall: Swift.Double?
+  public var calls: [DriveKitTripAnalysisModule.Call]?
+  required public init(json: DriveKitNetworkingModule.SwiftyJSON)
+  public func toJSON() -> [Swift.String : Any]
+  @objc deinit
+}
+public struct SpeedLimitContext : DriveKitNetworkingModule.DriveKitModel {
+  public var speedLimit: Swift.Int
+  public var distance: Swift.Int
+  public var duration: Swift.Int
+  public var speedingDistance: Swift.Int
+  public var speedingDuration: Swift.Int
+  public var score: Swift.Double
+  public init(json: DriveKitNetworkingModule.SwiftyJSON)
+  public func toJSON() -> [Swift.String : Any]
+}
+@objc public protocol DKTripInfo {
+  @objc var localTripId: Swift.String { get }
+  @objc var date: Foundation.Date { get }
+  @objc var startMode: DriveKitTripAnalysisModule.StartMode { get }
+}
+@objc public enum DKCreateTripSharingLinkStatus : Swift.Int {
+  case success
+  case userNotConnected
+  case invalidDuration
+  case unauthenticated
+  case forbidden
+  case activeLinkAlreadyExists
+  case error
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum DKGetTripSharingLinkStatus : Swift.Int {
+  case success
+  case failedToGetCacheOnly
+  case userNotConnected
+  case unauthenticated
+  case forbidden
+  case noActiveLink
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum DKRevokeTripSharingLinkStatus : Swift.Int {
+  case success
+  case error
+  case userNotConnected
+  case unauthenticated
+  case forbidden
+  case noActiveLink
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum TripResponseInfo : Swift.Int {
+  case engineSpeedNotAvailable = 16
+  case engineSpeedIsNull = 17
+  case noVehicleCharacteristics = 18
+  case dataLoss = 20
+  case distanceTooShort = 25
+  case invalidVehicleCharacteristics = 28
+  case invalidVehicleId = 32
+  public func getComment() -> Swift.String
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @objc public class TripAnalysisConfig : ObjectiveC.NSObject {
+  public var beaconRequired: Swift.Bool {
+    get
+  }
+  public var bluetoothDeviceRequired: Swift.Bool {
+    get
+  }
+  public var enableSharePosition: Swift.Bool {
+    get
+  }
+  public var stopTimeOut: Swift.Int {
+    get
+  }
+  public var autoCancelTripMaxSpeed: Swift.Double {
+    get
+  }
+  public var vehicleId: Swift.String? {
+    get
+  }
+  public var beacons: [DriveKitTripAnalysisModule.BeaconData] {
+    get
+  }
+  public var beaconsVehicles: [DriveKitTripAnalysisModule.BeaconData] {
+    get
+  }
+  public var autostart: Swift.Bool {
+    get
+  }
+  public var lowPowerMode: Swift.Bool {
+    get
+  }
+  public var bluetoothDevices: [DriveKitTripAnalysisModule.BluetoothData] {
+    get
+  }
+  public var bluetoothDevicesVehicles: [DriveKitTripAnalysisModule.BluetoothData] {
+    get
+  }
+  public var vehiclesConfigTakeover: Swift.Bool {
+    get
+  }
+  public var vehicleAutoStart: Swift.Bool {
+    get
+  }
+  public var monitorPotentialTripStart: Swift.Bool {
+    get
+  }
+  public var crashDetection: Swift.Bool {
+    get
+  }
+  public var activityRecording: Swift.Bool {
+    get
+  }
+  public var allowBeaconTripStart: Swift.Bool {
+    get
+  }
+  public var crashFeedbackConfig: DriveKitTripAnalysisModule.DKCrashFeedbackConfig? {
+    get
+  }
+  @objc override dynamic public init()
+  @objc deinit
+}
+public enum TripAnalysisConstant {
+  public static let crashFeedbackNotificationCategoryIdentifier: Swift.String
+  public static let crashFeedbackNotificationCrashIdKey: Swift.String
+}
+public class CircularBuffer<T> {
+  final public let size: Swift.Int
+  public var last: T? {
+    get
+  }
+  public var count: Swift.Int {
+    get
+  }
+  public init(size: Swift.Int)
+  public func append(_ element: T)
+  public subscript(index: Swift.Int) -> T {
+    get
+  }
+  public func clear()
+  public func toArray() -> [T]
+  @objc deinit
+}
+extension DriveKitTripAnalysisModule.CircularBuffer : Swift.Collection {
+  public func index(after i: Swift.Int) -> Swift.Int
+  public var startIndex: Swift.Int {
+    get
+  }
+  public var endIndex: Swift.Int {
+    get
+  }
+  public typealias Element = T
+  public typealias Index = Swift.Int
+  public typealias Indices = Swift.DefaultIndices<DriveKitTripAnalysisModule.CircularBuffer<T>>
+  public typealias Iterator = Swift.IndexingIterator<DriveKitTripAnalysisModule.CircularBuffer<T>>
+  public typealias SubSequence = Swift.Slice<DriveKitTripAnalysisModule.CircularBuffer<T>>
+}
+public enum CrashFeedbackType : Swift.String, Swift.Codable {
+  case noCrash
+  case confirmed
+  case noFeedback
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum CrashFeedbackSeverity : Swift.String, Swift.Codable {
+  case none
+  case minor
+  case critical
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@objc public enum DKCrashFeedbackType : Swift.Int {
+  case noCrash
+  case confirmed
+  case noFeedback
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum DKCrashFeedbackSeverity : Swift.Int {
+  case none
+  case minor
+  case critical
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public class BrakeWear : DriveKitNetworkingModule.DriveKitModel {
+  public var frontBrakeAutonomy: Swift.Int
+  public var frontBrakeDistance: Swift.Int
+  public var frontBrakePadWear: Swift.Int
+  public var frontBrakeTotalWear: Swift.Int
+  public var frontBrakeWearRate: Swift.Int
+  public var rearBrakeAutonomy: Swift.Int
+  public var rearBrakeDistance: Swift.Int
+  public var rearBrakePadWear: Swift.Int
+  public var rearBrakeTotalWear: Swift.Int
+  public var rearBrakeWearRate: Swift.Int
+  required public init(json: DriveKitNetworkingModule.SwiftyJSON)
+  public func toJSON() -> [Swift.String : Any]
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @available(*, deprecated, message: "This class will be removed in a future version, at the end of 2025.")
+@objc public class PostGeneric : ObjectiveC.NSObject, DriveKitNetworkingModule.DriveKitModel {
+  public var route: DriveKitTripAnalysisModule.Route?
+  public var itineraryData: DriveKitTripAnalysisModule.ItineraryData?
+  public var vehicle: DriveKitTripAnalysisModule.TripVehicle?
+  final public let metaData: [Swift.String : Swift.String]?
+  public func toJSON() -> [Swift.String : Any]
+  public func toJSON(secure: Swift.Bool) -> [Swift.String : Any]
+  required public init(json: DriveKitNetworkingModule.SwiftyJSON)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class TripVehicle : ObjectiveC.NSObject, DriveKitNetworkingModule.DriveKitModel {
+  @objc public var carTypeIndex: Swift.Int
+  @objc public var carEngineIndex: Swift.Int
+  @objc public var carPower: Swift.Double
+  @objc public var carMass: Swift.Double
+  @objc public var carGearboxIndex: Swift.Int
+  @objc public var carConsumption: Swift.Double
+  @objc public var carAutoGearboxNumber: Swift.Int
+  @objc public var engineDisplacement: Swift.Double
+  @objc public var carPassengers: Swift.Int
+  @objc public var dqIndex: Swift.String?
+  @objc public var sra: Swift.String?
+  @objc public var frontTireSize: Swift.String?
+  @objc public var rearTireSize: Swift.String?
+  @objc public var length: Swift.Double
+  @objc public var width: Swift.Double
+  @objc public var height: Swift.Double
+  @objc public var engineCylinderNb: Swift.Int
+  @objc public var driveWheels: Swift.Int
+  @objc override dynamic public init()
+  public func toJSON() -> [Swift.String : Any]
+  required public init(json: DriveKitNetworkingModule.SwiftyJSON)
+  @objc public static func defaultVehicle() -> DriveKitTripAnalysisModule.TripVehicle
+  @objc deinit
+}
+@objc public class DKWorkingHours : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var enabled: Swift.Bool
+  @objc public var insideHours: DriveKitTripAnalysisModule.DKWorkingHoursTimeSlotStatus
+  @objc public var outsideHours: DriveKitTripAnalysisModule.DKWorkingHoursTimeSlotStatus
+  @objc public var workingHoursDayConfigurations: [DriveKitTripAnalysisModule.DKWorkingHoursDayConfiguration]
+  public init(enabled: Swift.Bool, insideHours: DriveKitTripAnalysisModule.DKWorkingHoursTimeSlotStatus = .business, outsideHours: DriveKitTripAnalysisModule.DKWorkingHoursTimeSlotStatus = .personal, workingHoursDayConfigurations: [DriveKitTripAnalysisModule.DKWorkingHoursDayConfiguration])
+  public func toJSON() -> [Swift.String : Any]
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@objc public class DKWorkingHoursDayConfiguration : ObjectiveC.NSObject, Swift.Codable {
+  @objc public var day: DriveKitCoreModule.DKDay
+  @objc public var entireDayOff: Swift.Bool
+  @objc public var startTime: Swift.Double
+  @objc public var endTime: Swift.Double
+  public init(day: DriveKitCoreModule.DKDay, entireDayOff: Swift.Bool, startTime: Swift.Double, endTime: Swift.Double, reverse: Swift.Bool = false)
+  public func toJSON() -> [Swift.String : Any]
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@objc public enum DKWorkingHoursTimeSlotStatus : Swift.Int, Swift.Codable {
+  case disabled
+  case personal
+  case business
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public class BluetoothData : ObjectiveC.NSObject, DriveKitNetworkingModule.DriveKitModel {
+  @objc final public let name: Swift.String
+  @objc final public let macAddress: Swift.String
+  @objc public init(name: Swift.String, macAddress: Swift.String)
+  required public init(json: DriveKitNetworkingModule.SwiftyJSON)
+  public func toJSON() -> [Swift.String : Any]
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class Logbook : DriveKitNetworkingModule.DriveKitModel {
+  public var status: Swift.Int
+  public var updateDate: Swift.String?
+  required public init(json: DriveKitNetworkingModule.SwiftyJSON)
+  public func toJSON() -> [Swift.String : Any]
+  @objc deinit
+}
+public class TireWear : DriveKitNetworkingModule.DriveKitModel {
+  public var frontTireAutonomy: Swift.Int
+  public var frontTireDistance: Swift.Int
+  public var frontTireTotalWear: Swift.Int
+  public var frontTireWear: Swift.Int
+  public var frontTireWearRate: Swift.Int
+  public var rearTireAutonomy: Swift.Int
+  public var rearTireDistance: Swift.Int
+  public var rearTireTotalWear: Swift.Int
+  public var rearTireWear: Swift.Int
+  public var rearTireWearRate: Swift.Int
+  required public init(json: DriveKitNetworkingModule.SwiftyJSON)
+  public func toJSON() -> [Swift.String : Any]
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class Route : DriveKitNetworkingModule.DriveKitModel {
+  final public let gpsDate: [Swift.Double]
+  final public let gpsVelocity: [Swift.Double]
+  final public let longitude: [Swift.Double]
+  final public let latitude: [Swift.Double]
+  final public let gpsElevation: [Swift.Double]
+  final public let gpsAccuracy: [Swift.Double]
+  final public let gpsHeading: [Swift.Double]
+  final public let screenLocked: [Swift.Double]
+  final public let activityValue: [Swift.Double]
+  final public let roll: [Swift.Int]
+  final public let pitch: [Swift.Int]
+  final public let yaw: [Swift.Int]
+  final public let gyroscopeNormVar: [Swift.Int]
+  convenience required public init(json: DriveKitNetworkingModule.SwiftyJSON)
+  public func toJSON() -> [Swift.String : Any]
+  @objc deinit
+}
+@objc public protocol TripListener {
+  @objc optional func tripRecordingStarted(state: any DriveKitTripAnalysisModule.DKTripRecordingStartedState)
+  @objc optional func tripRecordingConfirmed(state: any DriveKitTripAnalysisModule.DKTripRecordingConfirmedState)
+  @objc optional func tripRecordingCanceled(state: any DriveKitTripAnalysisModule.DKTripRecordingCanceledState)
+  @objc optional func tripRecordingFinished(state: any DriveKitTripAnalysisModule.DKTripRecordingFinishedState)
+  @objc optional func beaconDetected()
+  @objc optional func significantLocationChangeDetected(location: CoreLocation.CLLocation)
+  @objc optional func potentialTripStart(startMode: DriveKitTripAnalysisModule.StartMode)
+  @objc optional func sdkStateChanged(state: DriveKitTripAnalysisModule.State)
+  @objc optional func tripPoint(tripPoint: DriveKitTripAnalysisModule.TripPoint)
+  @objc optional func tripFinished(responseStatus: DriveKitTripAnalysisModule.TripResponseStatus)
+  @objc optional func tripSavedForRepost()
+  @objc optional func crashDetected(crashInfo: DriveKitTripAnalysisModule.DKCrashInfo)
+  @objc optional func crashFeedbackSent(crashInfo: DriveKitTripAnalysisModule.DKCrashInfo, feedbackType: DriveKitTripAnalysisModule.DKCrashFeedbackType, severity: DriveKitTripAnalysisModule.DKCrashFeedbackSeverity)
+  @available(*, deprecated, message: "This method will be removed in a future version, at the end of 2025. It is replaced by `tripRecordingConfirmed(state: TripRecordingConfirmedState)`.")
+  @objc optional func tripStarted(startMode: DriveKitTripAnalysisModule.StartMode)
+  @available(*, deprecated, message: "This method will be removed in a future version, at the end of 2025. It is replaced by `tripFinished(responseStatus: TripResponseStatus)`.")
+  @objc optional func tripFinished(post: DriveKitTripAnalysisModule.PostGeneric, response: DriveKitTripAnalysisModule.PostGenericResponse)
+  @available(*, deprecated, message: "This method will be removed in a future version, at the end of 2025. It is replaced by `tripRecordingCanceled(state: TripRecordingCanceledState)`.")
+  @objc optional func tripCancelled(cancelTrip: DriveKitTripAnalysisModule.CancelTrip)
+}
+@objc public enum StartMode : Swift.Int, Swift.Codable {
+  case gps = 1
+  case beacon = 2
+  case manual = 3
+  case geozone = 4
+  case bluetooth = 5
+  case bluetooth_unknown = 6
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public class TripPoint : ObjectiveC.NSObject {
+  final public let latitude: Swift.Double
+  final public let longitude: Swift.Double
+  final public let speed: Swift.Double
+  final public let accuracy: Swift.Double
+  final public let elevation: Swift.Double
+  final public let distance: Swift.Double
+  final public let heading: Swift.Double
+  final public let duration: Swift.Double
+  public init(latitude: Swift.Double, longitude: Swift.Double, speed: Swift.Double, accuracy: Swift.Double, elevation: Swift.Double, distance: Swift.Double, heading: Swift.Double, duration: Swift.Double)
+  @objc deinit
+}
+public class EndTripLocation : DriveKitNetworkingModule.DriveKitModel {
+  final public let latitude: Swift.Double
+  final public let longitude: Swift.Double
+  final public let accuracy: Swift.Double
+  public func toJSON() -> [Swift.String : Any]
+  required public init(json: DriveKitNetworkingModule.SwiftyJSON)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class DriveKitTripAnalysis : ObjectiveC.NSObject, DriveKitCoreModule.DKTripAnalysisModule {
+  @objc public static let sdkVersion: Swift.String
+  @objc public static let shared: DriveKitTripAnalysisModule.DriveKitTripAnalysis
+  @objc public var isCrashDetectionAvailable: Swift.Bool {
+    @objc get
+  }
+  @objc public var monitorPotentialTripStart: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc public var allowBeaconTripStart: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc public var autoCancelTripMaxSpeed: Swift.Double {
+    @objc get
+    @objc set
+  }
+  @objc final public let config: DriveKitTripAnalysisModule.TripAnalysisConfig
+  @objc public var isInitialized: Swift.Bool {
+    get
+  }
+  @objc public var stopTimeOut: Swift.Int {
+    @objc get
+  }
+  @objc final public let tripSharing: DriveKitTripAnalysisModule.DKTripSharing
+  @objc deinit
+  @objc public func initialize(tripListener: (any DriveKitTripAnalysisModule.TripListener)? = nil, appLaunchOptions: [UIKit.UIApplication.LaunchOptionsKey : Any]?)
+  @objc public func activateLowPowerMode(enable: Swift.Bool)
+  @objc public func activateCrashDetection(_ enable: Swift.Bool)
+  @objc public func disableCrashFeedback()
+  @objc public func enableCrashFeedback(config: DriveKitTripAnalysisModule.DKCrashFeedbackConfig)
+  @objc public func activateActivityRecording(_ enable: Swift.Bool)
+  @objc public func activateAutoStart(enable: Swift.Bool)
+  @objc public func setBeaconRequired(required: Swift.Bool)
+  @objc public func setBluetoothDeviceRequired(_ required: Swift.Bool)
+  @objc public func enableSharePosition(enable: Swift.Bool)
+  @objc public func setVehicleId(id: Swift.String?)
+  @objc public func setVehicle(vehicle: DriveKitTripAnalysisModule.TripVehicle?)
+  @objc public func setStopTimeOut(timeOut: Swift.Int)
+  @objc public func setBeacons(beacons: [DriveKitTripAnalysisModule.BeaconData])
+  @objc public func getAllBeacons() -> [DriveKitTripAnalysisModule.BeaconData]
+  @objc public func setBluetoothDevices(bluetoothDevices: [DriveKitTripAnalysisModule.BluetoothData])
+  @objc public func getAllBluetoothDevices() -> [DriveKitTripAnalysisModule.BluetoothData]
+  public func setVehiclesConfigTakeover(vehiclesConfigTakeOver: Swift.Bool)
+  @objc public func getAvailableBluetoothDevices() -> [DriveKitTripAnalysisModule.BluetoothData]
+  @objc public func setTripMetadata(_ metadata: [Swift.String : Swift.String]?)
+  @objc public func getTripMetadata() -> [Swift.String : Swift.String]?
+  @objc public func updateTripMetadata(key: Swift.String, value: Swift.String?)
+  @objc public func deleteTripMetadata(key: Swift.String)
+  @objc public func deleteTripMetadata()
+  @objc public func addTripListener(_ tripListener: any DriveKitTripAnalysisModule.TripListener)
+  @objc public func removeTripListener(_ tripListener: any DriveKitTripAnalysisModule.TripListener)
+  @objc public func removeAllTripListeners()
+  @objc public func startTrip()
+  @objc public func stopTrip()
+  @objc public func cancelTrip()
+  @available(*, deprecated, message: "This method is now deprecated and will be removed in a future version, at the end of 2025. Use `getCurrentTripInfo()?.startMode` instead.")
+  public func getCurrentStartMode() -> DriveKitTripAnalysisModule.StartMode?
+  @available(*, deprecated, message: "This method is now deprecated and will be removed in a future version, at the end of 2025. Use `getCurrentTripInfo()?.date` instead.")
+  public func getCurrentTripStartDate() -> Foundation.Date?
+  @objc public func getCurrentTripInfo() -> (any DriveKitTripAnalysisModule.DKTripInfo)?
+  @available(*, deprecated, message: "This method is now deprecated and will be removed in a future version. Use `getLastTripPointOfCurrentTrip` instead.")
+  public func getLastTripPoint() -> DriveKitTripAnalysisModule.TripPoint?
+  public func getLastTripPointOfCurrentTrip() -> DriveKitTripAnalysisModule.TripPoint?
+  @objc public func getLastTripLocation() -> (any DriveKitCoreModule.DKTripLocation)?
+  @available(*, deprecated, message: "This method is now deprecated and will be removed in a future version, at the end of 2025. Use `getCurrentTripInfo()?.startMode` instead.")
+  @objc(getCurrentStartMode) public func objc_getCurrentStartMode() -> Swift.Int
+  @objc public func isConfigured() -> Swift.Bool
+  public func checkTripsToRepost(fromBackground: Swift.Bool = false)
+  public func checkTripToRepost()
+  @objc(checkTripToRepost) public func objc_checkTripToRepost()
+  @objc(checkTripToRepost:) public func objc_checkTripToRepost(fromBackground: Swift.Bool)
+  public var bluetoothUsage: DriveKitCoreModule.DKBluetoothUsage {
+    get
+  }
+  public func tripSyncFinishedWithEndTripLocation(endTripLocation: any DriveKitCoreModule.DKTripLocation)
+  @objc public func isTripRunning() -> Swift.Bool
+  @objc public func getRecorderState() -> DriveKitTripAnalysisModule.State
+  @objc public func temporaryDeactivationEndDate() -> Foundation.Date?
+  @objc public func temporaryDeactivateSDK(minutes: Swift.Int)
+  @objc public func cancelTemporaryDeactivation()
+  @objc public func getWorkingHours(type: DriveKitCoreModule.SynchronizationType = .defaultSync, completion: @escaping (DriveKitTripAnalysisModule.DKWorkingHoursSyncStatus, DriveKitTripAnalysisModule.DKWorkingHours?) -> Swift.Void)
+  @objc public func updateWorkingHours(workingHours: DriveKitTripAnalysisModule.DKWorkingHours, completion: @escaping (DriveKitTripAnalysisModule.DKWorkingHoursUpdateStatus) -> Swift.Void)
+  public func getLogbookTripType() -> DriveKitTripAnalysisModule.LogbookType?
+  @objc public func sendCrashFeedback(crashInfo: DriveKitTripAnalysisModule.DKCrashInfo, confirmed: DriveKitTripAnalysisModule.DKCrashFeedbackType, severity: DriveKitTripAnalysisModule.DKCrashFeedbackSeverity)
+  public func sendCrashFeedback(crashInfo: DriveKitTripAnalysisModule.DKCrashInfo, feedback: DriveKitTripAnalysisModule.CrashFeedbackType, severity: DriveKitTripAnalysisModule.CrashFeedbackSeverity)
+  @objc public func crashFeedbackNotificationOpened(crashId: Swift.String) -> DriveKitTripAnalysisModule.DKCrashInfo?
+  @objc public func noCrashConfirmationOpened(crashId: Swift.String) -> DriveKitTripAnalysisModule.DKCrashInfo?
+  @objc public func registerCrashFeedbackDelegate(delegate: any DriveKitTripAnalysisModule.CrashFeedbackDelegate)
+  @objc public func unregisterCrashFeedbackDelegate(delegate: any DriveKitTripAnalysisModule.CrashFeedbackDelegate)
+  @available(*, deprecated, message: "This method will be removed in a future version, at the end of 2025")
+  @objc public func getTripResponseStatus(_ tripResponse: DriveKitTripAnalysisModule.PostGenericResponse) -> DriveKitTripAnalysisModule.TripResponseStatus
+  @available(*, deprecated, message: "You no longer need to call the reset method of any module except the one in DriveKit")
+  @objc public func reset()
+}
+extension DriveKitTripAnalysisModule.DriveKitTripAnalysis : DriveKitCoreModule.DriveKitDelegate {
+  @objc dynamic public func driveKitDidConnect(_ driveKit: DriveKitCoreModule.DriveKit)
+}
+extension DriveKitTripAnalysisModule.DriveKitTripAnalysis : DriveKitTripAnalysisModule.TripListener {
+  @objc dynamic public func tripStarted(startMode: DriveKitTripAnalysisModule.StartMode)
+  @objc dynamic public func tripFinished(responseStatus: DriveKitTripAnalysisModule.TripResponseStatus)
+  @objc dynamic public func potentialTripStart(startMode: DriveKitTripAnalysisModule.StartMode)
+}
+public class ItineraryStatistics : DriveKitNetworkingModule.DriveKitModel {
+  public var tripDuration: Swift.Double
+  public var drivingDuration: Swift.Double
+  public var idlingDuration: Swift.Double
+  public var drivingPercentage: Swift.Double
+  public var idlingPercentage: Swift.Double
+  public var distance: Swift.Double
+  public var speedMean: Swift.Double
+  public var subdispNb: Swift.Int
+  public var meteo: Swift.Int
+  public var day: Swift.Bool
+  public var weekDay: Swift.Bool
+  public var transportationMode: Swift.Int
+  required public init(json: DriveKitNetworkingModule.SwiftyJSON)
+  public func toJSON() -> [Swift.String : Any]
+  @objc deinit
+}
+public class Comment : DriveKitNetworkingModule.DriveKitModel {
+  public var errorCode: Swift.Int
+  public var comment: Swift.String
+  required public init(json: DriveKitNetworkingModule.SwiftyJSON)
+  public func toJSON() -> [Swift.String : Any]
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class CrashDetectionSimulator {
+  public static func simulateCrash(timestamp: [Swift.Int16], accelerationX: [Swift.Int16], accelerationY: [Swift.Int16], accelerationZ: [Swift.Int16], roll: [Swift.Int16], pitch: [Swift.Int16], yaw: [Swift.Int16], gyroscopeNormVar: [Swift.Int16], pressure: [Swift.Int16])
+  public static func getTimestampOffset() -> Swift.Int
+  @objc deinit
+}
+@objc public enum State : Swift.Int {
+  case inactive, starting, running, stopping, sending
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @objc public class DKTripSharing : ObjectiveC.NSObject {
+  public func isAvailable() -> Swift.Bool
+  public func createLink(durationInSeconds: Swift.Int, completion: @escaping (_ status: DriveKitTripAnalysisModule.DKCreateTripSharingLinkStatus, _ data: (any DriveKitTripAnalysisModule.DKTripSharingLink)?) -> Swift.Void)
+  public func getLink(synchronizationType: DriveKitCoreModule.SynchronizationType = .defaultSync, completion: @escaping (_ status: DriveKitTripAnalysisModule.DKGetTripSharingLinkStatus, _ data: (any DriveKitTripAnalysisModule.DKTripSharingLink)?) -> Swift.Void)
+  public func revokeLink(completion: @escaping (_ status: DriveKitTripAnalysisModule.DKRevokeTripSharingLinkStatus) -> Swift.Void)
+  @objc override dynamic public init()
+  @objc deinit
+}
+public class DKAdvancedEnergyEstimation : DriveKitNetworkingModule.DriveKitModel {
+  public var energy: Swift.Double
+  public var energyConsumption: Swift.Double
+  public var energyOpti: Swift.Double
+  public var energyOptiConsumption: Swift.Double
+  public var duration: Swift.Double
+  public var distance: Swift.Double
+  public var contextId: Swift.Int
+  required public init(json: DriveKitNetworkingModule.SwiftyJSON)
+  public func toJSON() -> [Swift.String : Any]
+  @objc deinit
+}
+public class TripSimulator {
+  public init()
+  public func start()
+  public func sendLocation(_ location: CoreLocation.CLLocation)
+  public func stop()
+  @objc deinit
+}
+public enum LogbookType : Swift.Int {
+  case unknown, pro, perso
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public class AdvancedFuelEstimation : DriveKitNetworkingModule.DriveKitModel {
+  public var fuelEstimationContext: [DriveKitTripAnalysisModule.FuelEstimationContext]?
+  required public init(json: DriveKitNetworkingModule.SwiftyJSON)
+  public func toJSON() -> [Swift.String : Any]
+  @objc deinit
+}
+public struct SpeedingEvent : DriveKitNetworkingModule.DriveKitModel {
+  public var time: Swift.Double
+  public var longitude: Swift.Double
+  public var latitude: Swift.Double
+  public var type: Swift.Double
+  public var index: Swift.Int
+  public init(json: DriveKitNetworkingModule.SwiftyJSON)
+  public func toJSON() -> [Swift.String : Any]
+}
+extension DriveKitTripAnalysisModule.TripResponseError : Swift.Equatable {}
+extension DriveKitTripAnalysisModule.TripResponseError : Swift.Hashable {}
+extension DriveKitTripAnalysisModule.TripResponseError : Swift.RawRepresentable {}
+extension DriveKitTripAnalysisModule.DKCrashStatus : Swift.Equatable {}
+extension DriveKitTripAnalysisModule.DKCrashStatus : Swift.Hashable {}
+extension DriveKitTripAnalysisModule.DKCrashStatus : Swift.RawRepresentable {}
+extension DriveKitTripAnalysisModule.DKWorkingHoursSyncStatus : Swift.Equatable {}
+extension DriveKitTripAnalysisModule.DKWorkingHoursSyncStatus : Swift.Hashable {}
+extension DriveKitTripAnalysisModule.DKWorkingHoursSyncStatus : Swift.RawRepresentable {}
+extension DriveKitTripAnalysisModule.DKWorkingHoursUpdateStatus : Swift.Equatable {}
+extension DriveKitTripAnalysisModule.DKWorkingHoursUpdateStatus : Swift.Hashable {}
+extension DriveKitTripAnalysisModule.DKWorkingHoursUpdateStatus : Swift.RawRepresentable {}
+extension DriveKitTripAnalysisModule.TripResponseStatusType : Swift.Equatable {}
+extension DriveKitTripAnalysisModule.TripResponseStatusType : Swift.Hashable {}
+extension DriveKitTripAnalysisModule.TripResponseStatusType : Swift.RawRepresentable {}
+extension DriveKitTripAnalysisModule.DKCrashAlert : Swift.Equatable {}
+extension DriveKitTripAnalysisModule.DKCrashAlert : Swift.Hashable {}
+extension DriveKitTripAnalysisModule.DKCrashAlert : Swift.RawRepresentable {}
+@available(*, deprecated, message: "This class will be removed in a future version, at the end of 2025.")
+extension DriveKitTripAnalysisModule.CancelTrip : Swift.Equatable {}
+@available(*, deprecated, message: "This class will be removed in a future version, at the end of 2025.")
+extension DriveKitTripAnalysisModule.CancelTrip : Swift.Hashable {}
+@available(*, deprecated, message: "This class will be removed in a future version, at the end of 2025.")
+extension DriveKitTripAnalysisModule.CancelTrip : Swift.RawRepresentable {}
+extension DriveKitTripAnalysisModule.DKTripCancelationReason : Swift.Equatable {}
+extension DriveKitTripAnalysisModule.DKTripCancelationReason : Swift.Hashable {}
+extension DriveKitTripAnalysisModule.DKTripCancelationReason : Swift.RawRepresentable {}
+extension DriveKitTripAnalysisModule.DKCreateTripSharingLinkStatus : Swift.Equatable {}
+extension DriveKitTripAnalysisModule.DKCreateTripSharingLinkStatus : Swift.Hashable {}
+extension DriveKitTripAnalysisModule.DKCreateTripSharingLinkStatus : Swift.RawRepresentable {}
+extension DriveKitTripAnalysisModule.DKGetTripSharingLinkStatus : Swift.Equatable {}
+extension DriveKitTripAnalysisModule.DKGetTripSharingLinkStatus : Swift.Hashable {}
+extension DriveKitTripAnalysisModule.DKGetTripSharingLinkStatus : Swift.RawRepresentable {}
+extension DriveKitTripAnalysisModule.DKRevokeTripSharingLinkStatus : Swift.Equatable {}
+extension DriveKitTripAnalysisModule.DKRevokeTripSharingLinkStatus : Swift.Hashable {}
+extension DriveKitTripAnalysisModule.DKRevokeTripSharingLinkStatus : Swift.RawRepresentable {}
+extension DriveKitTripAnalysisModule.TripResponseInfo : Swift.Equatable {}
+extension DriveKitTripAnalysisModule.TripResponseInfo : Swift.Hashable {}
+extension DriveKitTripAnalysisModule.TripResponseInfo : Swift.RawRepresentable {}
+extension DriveKitTripAnalysisModule.CrashFeedbackType : Swift.Equatable {}
+extension DriveKitTripAnalysisModule.CrashFeedbackType : Swift.Hashable {}
+extension DriveKitTripAnalysisModule.CrashFeedbackType : Swift.RawRepresentable {}
+extension DriveKitTripAnalysisModule.CrashFeedbackSeverity : Swift.Equatable {}
+extension DriveKitTripAnalysisModule.CrashFeedbackSeverity : Swift.Hashable {}
+extension DriveKitTripAnalysisModule.CrashFeedbackSeverity : Swift.RawRepresentable {}
+extension DriveKitTripAnalysisModule.DKCrashFeedbackType : Swift.Equatable {}
+extension DriveKitTripAnalysisModule.DKCrashFeedbackType : Swift.Hashable {}
+extension DriveKitTripAnalysisModule.DKCrashFeedbackType : Swift.RawRepresentable {}
+extension DriveKitTripAnalysisModule.DKCrashFeedbackSeverity : Swift.Equatable {}
+extension DriveKitTripAnalysisModule.DKCrashFeedbackSeverity : Swift.Hashable {}
+extension DriveKitTripAnalysisModule.DKCrashFeedbackSeverity : Swift.RawRepresentable {}
+extension DriveKitTripAnalysisModule.DKWorkingHoursTimeSlotStatus : Swift.Equatable {}
+extension DriveKitTripAnalysisModule.DKWorkingHoursTimeSlotStatus : Swift.Hashable {}
+extension DriveKitTripAnalysisModule.DKWorkingHoursTimeSlotStatus : Swift.RawRepresentable {}
+extension DriveKitTripAnalysisModule.StartMode : Swift.Equatable {}
+extension DriveKitTripAnalysisModule.StartMode : Swift.Hashable {}
+extension DriveKitTripAnalysisModule.StartMode : Swift.RawRepresentable {}
+extension DriveKitTripAnalysisModule.State : Swift.Equatable {}
+extension DriveKitTripAnalysisModule.State : Swift.Hashable {}
+extension DriveKitTripAnalysisModule.State : Swift.RawRepresentable {}
+extension DriveKitTripAnalysisModule.LogbookType : Swift.Equatable {}
+extension DriveKitTripAnalysisModule.LogbookType : Swift.Hashable {}
+extension DriveKitTripAnalysisModule.LogbookType : Swift.RawRepresentable {}

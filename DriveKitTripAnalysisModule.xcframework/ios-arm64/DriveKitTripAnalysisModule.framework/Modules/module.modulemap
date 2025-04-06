@@ -1,0 +1,4 @@
+framework module DriveKitTripAnalysisModule {
+  header "DriveKitTripAnalysisModule-Swift.h"
+  requires objc
+}
