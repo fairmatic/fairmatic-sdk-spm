@@ -20,13 +20,7 @@ This repository enables Swift Package Manager support for the Fairmatic SDK for 
 
 6. Add the `-ObjC` flag to the *Other Linker Flags* section of your target's build settings.
 
-## SDK Documentation
-To get started with the iOS SDK integration, please refer to the SDK documentation [here](https://docs.fairmatic.com/ios/start)
-
-## SDK API References
-Please find the API references [here](https://docs.fairmatic.com/ios/ios-sdk-api-references)
-
-## Sample application
+## Sample application and Quick Start guide
 Please find the insurance sample app for iOS [here](https://github.com/fairmatic/fmsdk-insurance-sample-ios)
 
 For privacy policy and licensing, visit https://www.fairmatic.com/privacy-policy
