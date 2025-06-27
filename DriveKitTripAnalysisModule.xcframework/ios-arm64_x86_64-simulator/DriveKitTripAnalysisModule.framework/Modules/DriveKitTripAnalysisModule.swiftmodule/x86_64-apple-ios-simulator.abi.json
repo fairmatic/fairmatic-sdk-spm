@@ -3337,13 +3337,6 @@
       },
       {
         "kind": "Import",
-        "name": "SystemConfiguration",
-        "printedName": "SystemConfiguration",
-        "declKind": "Import",
-        "moduleName": "DriveKitTripAnalysisModule"
-      },
-      {
-        "kind": "Import",
         "name": "DriveKitNetworkingModule",
         "printedName": "DriveKitNetworkingModule",
         "declKind": "Import",
@@ -8624,6 +8617,16 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "DriveKitTripAnalysisModule",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "DriveKitNetworkingModule",
         "printedName": "DriveKitNetworkingModule",
         "declKind": "Import",
@@ -13878,6 +13881,13 @@
         "kind": "Import",
         "name": "DriveKitDBTripAccessModule",
         "printedName": "DriveKitDBTripAccessModule",
+        "declKind": "Import",
+        "moduleName": "DriveKitTripAnalysisModule"
+      },
+      {
+        "kind": "Import",
+        "name": "DriveKitNetworkingModule",
+        "printedName": "DriveKitNetworkingModule",
         "declKind": "Import",
         "moduleName": "DriveKitTripAnalysisModule"
       },
@@ -19391,6 +19401,93 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "specificData",
+            "printedName": "specificData",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:26DriveKitTripAnalysisModule19PostGenericResponseC12specificDataSDySSypGSgvp",
+            "mangledName": "$s26DriveKitTripAnalysisModule19PostGenericResponseC12specificDataSDySSypGSgvp",
+            "moduleName": "DriveKitTripAnalysisModule",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "SetterAccess",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "[Swift.String : Any]?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Dictionary",
+                        "printedName": "[Swift.String : Any]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ProtocolComposition",
+                            "printedName": "Any"
+                          }
+                        ],
+                        "usr": "s:SD"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:26DriveKitTripAnalysisModule19PostGenericResponseC12specificDataSDySSypGSgvg",
+                "mangledName": "$s26DriveKitTripAnalysisModule19PostGenericResponseC12specificDataSDySSypGSgvg",
+                "moduleName": "DriveKitTripAnalysisModule",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
             "kind": "Function",
             "name": "toJSON",
             "printedName": "toJSON()",
@@ -19420,7 +19517,8 @@
             "mangledName": "$s26DriveKitTripAnalysisModule19PostGenericResponseC6toJSONSDySSypGyF",
             "moduleName": "DriveKitTripAnalysisModule",
             "declAttributes": [
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -38319,6 +38417,27 @@
         "printedName": "DriveKitTripAnalysis",
         "children": [
           {
+            "kind": "Function",
+            "name": "getConfig",
+            "printedName": "getConfig()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DKConfigTripAnalysis",
+                "printedName": "DriveKitCoreModule.DKConfigTripAnalysis",
+                "usr": "s:18DriveKitCoreModule20DKConfigTripAnalysisV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:26DriveKitTripAnalysisModule0abcD0C9getConfig0ab4CoreE008DKConfigcD0VyF",
+            "mangledName": "$s26DriveKitTripAnalysisModule0abcD0C9getConfig0ab4CoreE008DKConfigcD0VyF",
+            "moduleName": "DriveKitTripAnalysisModule",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
             "kind": "Var",
             "name": "sdkVersion",
             "printedName": "sdkVersion",
@@ -45655,14 +45774,14 @@
     {
       "filePath": "\/Users\/vagrant\/git\/drivekit-trip-analysis\/service\/recorder\/TripBuilder.swift",
       "kind": "BooleanLiteral",
-      "offset": 416,
+      "offset": 389,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/drivekit-trip-analysis\/service\/recorder\/TripBuilder.swift",
       "kind": "BooleanLiteral",
-      "offset": 675,
+      "offset": 648,
       "length": 4,
       "value": "true"
     },
@@ -45963,21 +46082,21 @@
     {
       "filePath": "\/Users\/vagrant\/git\/drivekit-trip-analysis\/service\/LocationService.swift",
       "kind": "Array",
-      "offset": 506,
+      "offset": 518,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/drivekit-trip-analysis\/service\/LocationService.swift",
       "kind": "BooleanLiteral",
-      "offset": 549,
+      "offset": 561,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/drivekit-trip-analysis\/service\/LocationService.swift",
       "kind": "StringLiteral",
-      "offset": 655,
+      "offset": 667,
       "length": 60,
       "value": "\"com.drivequant.drivekit-tripAnalysis.locationService.queue\""
     },
@@ -48217,35 +48336,42 @@
     {
       "filePath": "\/Users\/vagrant\/git\/drivekit-trip-analysis\/DriveKitTripAnalysis.swift",
       "kind": "BooleanLiteral",
-      "offset": 2926,
+      "offset": 3808,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/drivekit-trip-analysis\/DriveKitTripAnalysis.swift",
       "kind": "FloatLiteral",
-      "offset": 3207,
+      "offset": 4089,
       "length": 4,
       "value": "0.08"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/drivekit-trip-analysis\/DriveKitTripAnalysis.swift",
       "kind": "BooleanLiteral",
-      "offset": 3797,
+      "offset": 4126,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/drivekit-trip-analysis\/DriveKitTripAnalysis.swift",
       "kind": "BooleanLiteral",
-      "offset": 3847,
+      "offset": 5284,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/drivekit-trip-analysis\/DriveKitTripAnalysis.swift",
       "kind": "BooleanLiteral",
-      "offset": 20741,
+      "offset": 5334,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/drivekit-trip-analysis\/DriveKitTripAnalysis.swift",
+      "kind": "BooleanLiteral",
+      "offset": 22590,
       "length": 5,
       "value": "false"
     },

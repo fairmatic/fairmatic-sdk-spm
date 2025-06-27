@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
-// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name DriveKitCoreModule
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name DriveKitCoreModule
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
 import BackgroundTasks
 import CommonCrypto
 import CoreBluetooth
@@ -31,6 +31,9 @@ import _SwiftConcurrencyShims
   @objc public var config: DriveKitCoreModule.GlobalConfig
   final public let modules: DriveKitCoreModule.DKModuleManager
   @objc public var isInitialized: Swift.Bool {
+    get
+  }
+  public var installationId: Swift.String? {
     get
   }
   @objc deinit
@@ -67,6 +70,7 @@ extension DriveKitCoreModule.DriveKit : DriveKitCoreModule.DriveKitDelegate {
   @objc dynamic public func driveKitDidConnect(_ driveKit: DriveKitCoreModule.DriveKit)
   @objc dynamic public func driveKitDidDisconnect(_ driveKit: DriveKitCoreModule.DriveKit)
   @objc dynamic public func driveKit(_ driveKit: DriveKitCoreModule.DriveKit, accountDeletionCompleted status: DriveKitCoreModule.DeleteAccountStatus)
+  @objc dynamic public func userIdUpdateStatusChanged(status: DriveKitCoreModule.UpdateUserIdStatus, userId: Swift.String?)
 }
 public struct DKAddress {
   public let city: Swift.String
@@ -151,7 +155,7 @@ public struct WeakArray<Element> where Element : AnyObject {
   public mutating func remove(_ element: DriveKitCoreModule.WeakReference<Element>)
 }
 extension DriveKitCoreModule.WeakArray : Swift.Collection {
-  public func index(after i: Swift.Int) -> Swift.Int
+  public func index(after index: Swift.Int) -> Swift.Int
   public var startIndex: Swift.Int {
     get
   }
@@ -203,7 +207,7 @@ public struct DKDelegateList<Element> where Element : AnyObject {
   public mutating func remove(_ delegate: Element)
 }
 extension DriveKitCoreModule.DKDelegateList : Swift.Collection {
-  public func index(after i: Swift.Int) -> Swift.Int
+  public func index(after index: Swift.Int) -> Swift.Int
   public var startIndex: Swift.Int {
     get
   }
@@ -446,14 +450,53 @@ public enum SmartphoneDataUtils {
   public func execute() -> R?
   @objc deinit
 }
+public struct DriveKitConfig {
+  public init(autoInitEnabled: Swift.Bool, isConfigured: Swift.Bool, isUserConnected: Swift.Bool, userId: Swift.String?, installationId: Swift.String?, isLoggingEnabled: Swift.Bool)
+}
+public struct DKConfigTripAnalysis {
+  public init(isAutoStartEnabled: Swift.Bool, stopTimeout: Swift.Int, autoCancelTripMaxSpeed: Swift.Double, isMonitoringPotentialTripStart: Swift.Bool, isBeaconRequired: Swift.Bool, isBeaconAllowedToStartTrip: Swift.Bool, isBluetoothDeviceRequired: Swift.Bool, isCrashDetectionEnabled: Swift.Bool, isSharePositionEnabled: Swift.Bool, vehiclesConfigTakeover: Swift.Bool, beacons: [DriveKitCoreModule.DKConfigBeacon], bluetoothDevices: [DriveKitCoreModule.DKConfigBluetoothDevice])
+}
+public struct DKConfigVehicle {
+  public init(vehiclesLastSync: Foundation.Date?, vehicles: [DriveKitCoreModule.DKConfigVehicleItem])
+}
+public struct DKConfigVehicleItem {
+  public init(vehicleId: Swift.String, detectionMode: DriveKitCoreModule.DKConfigDetectionMode?, beaconIdentifier: DriveKitCoreModule.DKConfigBeacon?, bluetoothDevice: DriveKitCoreModule.DKConfigBluetoothDevice?)
+}
+public enum DKConfigDetectionMode : Swift.Int {
+  case gps
+  case disabled
+  case beacon
+  case bluetooth
+  public init?(value: Swift.String)
+  public var value: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public struct DKConfigBeacon : Swift.Codable {
+  public init(proximityUuid: Swift.String, major: Swift.Int = -1, minor: Swift.Int = -1)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct DKConfigBluetoothDevice : Swift.Codable {
+  public init(macAddress: Swift.String, name: Swift.String? = nil)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
 @_hasMissingDesignatedInitializers public class DKModuleManager {
   public var tripAnalysis: (any DriveKitCoreModule.DKTripAnalysisModule)?
+  public var vehicle: (any DriveKitCoreModule.DKVehicleModule)?
   @objc deinit
 }
 public protocol DKTripAnalysisModule {
   func checkTripToRepost()
   var bluetoothUsage: DriveKitCoreModule.DKBluetoothUsage { get }
   func tripSyncFinishedWithEndTripLocation(endTripLocation: any DriveKitCoreModule.DKTripLocation)
+  func getConfig() -> DriveKitCoreModule.DKConfigTripAnalysis
 }
 public enum DKBluetoothUsage {
   case none, configured, required
@@ -462,6 +505,10 @@ public enum DKBluetoothUsage {
   public var hashValue: Swift.Int {
     get
   }
+}
+public protocol DKVehicleModule {
+  func syncVehicles(_ completionHandler: @escaping (Swift.Bool) -> Swift.Void)
+  func getConfig() -> DriveKitCoreModule.DKConfigVehicle
 }
 extension UIKit.UIDevice {
   @_Concurrency.MainActor @preconcurrency public var modelIdentifier: Swift.String {
@@ -650,19 +697,11 @@ extension Swift.Array where Element : DriveKitCoreModule.DKUnmanagedObject {
     get
   }
 }
-#if compiler(>=5.3) && $NoncopyableGenerics
 extension Swift.Optional {
   public var logOrNil: Swift.String {
     get
   }
 }
-#else
-extension Swift.Optional {
-  public var logOrNil: Swift.String {
-    get
-  }
-}
-#endif
 @objc public enum DKPeriod : Swift.Int, Swift.Codable {
   case week
   case month
@@ -841,7 +880,7 @@ public protocol DKRemoteEventListener : AnyObject {
   func eventTriggered(_ event: DriveKitCoreModule.DKRemoteEvent, value: Swift.String)
 }
 @objc public enum DKRemoteEvent : Swift.Int, Swift.CaseIterable {
-  case logsUpload
+  case logsUpload, vehiclesSync
   public static func processHeaders(_ headers: [Swift.AnyHashable : Any])
   public init?(rawValue: Swift.Int)
   public typealias AllCases = [DriveKitCoreModule.DKRemoteEvent]
@@ -898,6 +937,9 @@ extension DriveKitCoreModule.DKConnectivityType : Swift.RawRepresentable {}
 extension DriveKitCoreModule.DriveKitBackgroundFetchStatus : Swift.Equatable {}
 extension DriveKitCoreModule.DriveKitBackgroundFetchStatus : Swift.Hashable {}
 extension DriveKitCoreModule.DriveKitBackgroundFetchStatus : Swift.RawRepresentable {}
+extension DriveKitCoreModule.DKConfigDetectionMode : Swift.Equatable {}
+extension DriveKitCoreModule.DKConfigDetectionMode : Swift.Hashable {}
+extension DriveKitCoreModule.DKConfigDetectionMode : Swift.RawRepresentable {}
 extension DriveKitCoreModule.DKBluetoothUsage : Swift.Equatable {}
 extension DriveKitCoreModule.DKBluetoothUsage : Swift.Hashable {}
 extension DriveKitCoreModule.DKSensor : Swift.Equatable {}
