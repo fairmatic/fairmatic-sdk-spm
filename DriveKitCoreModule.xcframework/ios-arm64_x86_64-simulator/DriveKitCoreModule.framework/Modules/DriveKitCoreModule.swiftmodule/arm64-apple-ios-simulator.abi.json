@@ -582,6 +582,62 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "installationId",
+            "printedName": "installationId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:18DriveKitCoreModule0aB0C14installationIdSSSgvp",
+            "mangledName": "$s18DriveKitCoreModule0aB0C14installationIdSSSgvp",
+            "moduleName": "DriveKitCoreModule",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18DriveKitCoreModule0aB0C14installationIdSSSgvg",
+                "mangledName": "$s18DriveKitCoreModule0aB0C14installationIdSSSgvg",
+                "moduleName": "DriveKitCoreModule",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
             "kind": "Function",
             "name": "objc_initialize",
             "printedName": "objc_initialize()",
@@ -1518,6 +1574,50 @@
             ],
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "userIdUpdateStatusChanged",
+            "printedName": "userIdUpdateStatusChanged(status:userId:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UpdateUserIdStatus",
+                "printedName": "DriveKitCoreModule.UpdateUserIdStatus",
+                "usr": "c:@M@DriveKitCoreModule@E@UpdateUserIdStatus"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@DriveKitCoreModule@objc(cs)DriveKit(im)userIdUpdateStatusChangedWithStatus:userId:",
+            "mangledName": "$s18DriveKitCoreModule0aB0C25userIdUpdateStatusChanged6status0eF0yAA0g4UserfH0O_SSSgtF",
+            "moduleName": "DriveKitCoreModule",
+            "objc_name": "userIdUpdateStatusChangedWithStatus:userId:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Class",
@@ -1526,7 +1626,8 @@
         "moduleName": "DriveKitCoreModule",
         "declAttributes": [
           "AccessControl",
-          "ObjC"
+          "ObjC",
+          "RawDocComment"
         ],
         "superclassUsr": "c:objc(cs)NSObject",
         "hasMissingDesignatedInitializers": true,
@@ -8880,6 +8981,20 @@
         ]
       },
       {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "DriveKitCoreModule"
+      },
+      {
+        "kind": "Import",
+        "name": "DriveKitNetworkingModule",
+        "printedName": "DriveKitNetworkingModule",
+        "declKind": "Import",
+        "moduleName": "DriveKitCoreModule"
+      },
+      {
         "kind": "TypeDecl",
         "name": "DriveKitLog",
         "printedName": "DriveKitLog",
@@ -11352,6 +11467,1071 @@
       },
       {
         "kind": "TypeDecl",
+        "name": "DriveKitConfig",
+        "printedName": "DriveKitConfig",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(autoInitEnabled:isConfigured:isUserConnected:userId:installationId:isLoggingEnabled:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DriveKitConfig",
+                "printedName": "DriveKitCoreModule.DriveKitConfig",
+                "usr": "s:18DriveKitCoreModule0aB6ConfigV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:18DriveKitCoreModule0aB6ConfigV15autoInitEnabled12isConfigured0I13UserConnected6userId012installationN00i7LoggingH0ACSb_S2bSSSgAJSbtcfc",
+            "mangledName": "$s18DriveKitCoreModule0aB6ConfigV15autoInitEnabled12isConfigured0I13UserConnected6userId012installationN00i7LoggingH0ACSb_S2bSSSgAJSbtcfc",
+            "moduleName": "DriveKitCoreModule",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:18DriveKitCoreModule0aB6ConfigV",
+        "mangledName": "$s18DriveKitCoreModule0aB6ConfigV",
+        "moduleName": "DriveKitCoreModule",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "DKConfigTripAnalysis",
+        "printedName": "DKConfigTripAnalysis",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(isAutoStartEnabled:stopTimeout:autoCancelTripMaxSpeed:isMonitoringPotentialTripStart:isBeaconRequired:isBeaconAllowedToStartTrip:isBluetoothDeviceRequired:isCrashDetectionEnabled:isSharePositionEnabled:vehiclesConfigTakeover:beacons:bluetoothDevices:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DKConfigTripAnalysis",
+                "printedName": "DriveKitCoreModule.DKConfigTripAnalysis",
+                "usr": "s:18DriveKitCoreModule20DKConfigTripAnalysisV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[DriveKitCoreModule.DKConfigBeacon]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DKConfigBeacon",
+                    "printedName": "DriveKitCoreModule.DKConfigBeacon",
+                    "usr": "s:18DriveKitCoreModule14DKConfigBeaconV"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[DriveKitCoreModule.DKConfigBluetoothDevice]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DKConfigBluetoothDevice",
+                    "printedName": "DriveKitCoreModule.DKConfigBluetoothDevice",
+                    "usr": "s:18DriveKitCoreModule23DKConfigBluetoothDeviceV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:18DriveKitCoreModule20DKConfigTripAnalysisV18isAutoStartEnabled11stopTimeout010autoCancelF8MaxSpeed0h19MonitoringPotentialfJ00H14BeaconRequired0ht9AllowedTojF00h15BluetoothDeviceU00h14CrashDetectionK00h13SharePositionK022vehiclesConfigTakeover7beacons16bluetoothDevicesACSb_SiSdS7bSayAA0eT0VGSayAA0exY0VGtcfc",
+            "mangledName": "$s18DriveKitCoreModule20DKConfigTripAnalysisV18isAutoStartEnabled11stopTimeout010autoCancelF8MaxSpeed0h19MonitoringPotentialfJ00H14BeaconRequired0ht9AllowedTojF00h15BluetoothDeviceU00h14CrashDetectionK00h13SharePositionK022vehiclesConfigTakeover7beacons16bluetoothDevicesACSb_SiSdS7bSayAA0eT0VGSayAA0exY0VGtcfc",
+            "moduleName": "DriveKitCoreModule",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:18DriveKitCoreModule20DKConfigTripAnalysisV",
+        "mangledName": "$s18DriveKitCoreModule20DKConfigTripAnalysisV",
+        "moduleName": "DriveKitCoreModule",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "DKConfigVehicle",
+        "printedName": "DKConfigVehicle",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(vehiclesLastSync:vehicles:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DKConfigVehicle",
+                "printedName": "DriveKitCoreModule.DKConfigVehicle",
+                "usr": "s:18DriveKitCoreModule15DKConfigVehicleV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Date?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Date",
+                    "printedName": "Foundation.Date",
+                    "usr": "s:10Foundation4DateV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[DriveKitCoreModule.DKConfigVehicleItem]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DKConfigVehicleItem",
+                    "printedName": "DriveKitCoreModule.DKConfigVehicleItem",
+                    "usr": "s:18DriveKitCoreModule19DKConfigVehicleItemV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:18DriveKitCoreModule15DKConfigVehicleV16vehiclesLastSync0G0AC10Foundation4DateVSg_SayAA0eF4ItemVGtcfc",
+            "mangledName": "$s18DriveKitCoreModule15DKConfigVehicleV16vehiclesLastSync0G0AC10Foundation4DateVSg_SayAA0eF4ItemVGtcfc",
+            "moduleName": "DriveKitCoreModule",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:18DriveKitCoreModule15DKConfigVehicleV",
+        "mangledName": "$s18DriveKitCoreModule15DKConfigVehicleV",
+        "moduleName": "DriveKitCoreModule",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "DKConfigVehicleItem",
+        "printedName": "DKConfigVehicleItem",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(vehicleId:detectionMode:beaconIdentifier:bluetoothDevice:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DKConfigVehicleItem",
+                "printedName": "DriveKitCoreModule.DKConfigVehicleItem",
+                "usr": "s:18DriveKitCoreModule19DKConfigVehicleItemV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "DriveKitCoreModule.DKConfigDetectionMode?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DKConfigDetectionMode",
+                    "printedName": "DriveKitCoreModule.DKConfigDetectionMode",
+                    "usr": "s:18DriveKitCoreModule21DKConfigDetectionModeO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "DriveKitCoreModule.DKConfigBeacon?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DKConfigBeacon",
+                    "printedName": "DriveKitCoreModule.DKConfigBeacon",
+                    "usr": "s:18DriveKitCoreModule14DKConfigBeaconV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "DriveKitCoreModule.DKConfigBluetoothDevice?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DKConfigBluetoothDevice",
+                    "printedName": "DriveKitCoreModule.DKConfigBluetoothDevice",
+                    "usr": "s:18DriveKitCoreModule23DKConfigBluetoothDeviceV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:18DriveKitCoreModule19DKConfigVehicleItemV9vehicleId13detectionMode16beaconIdentifier15bluetoothDeviceACSS_AA0e9DetectionK0OSgAA0E6BeaconVSgAA0e9BluetoothO0VSgtcfc",
+            "mangledName": "$s18DriveKitCoreModule19DKConfigVehicleItemV9vehicleId13detectionMode16beaconIdentifier15bluetoothDeviceACSS_AA0e9DetectionK0OSgAA0E6BeaconVSgAA0e9BluetoothO0VSgtcfc",
+            "moduleName": "DriveKitCoreModule",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:18DriveKitCoreModule19DKConfigVehicleItemV",
+        "mangledName": "$s18DriveKitCoreModule19DKConfigVehicleItemV",
+        "moduleName": "DriveKitCoreModule",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "DKConfigDetectionMode",
+        "printedName": "DKConfigDetectionMode",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "gps",
+            "printedName": "gps",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(DriveKitCoreModule.DKConfigDetectionMode.Type) -> DriveKitCoreModule.DKConfigDetectionMode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DKConfigDetectionMode",
+                    "printedName": "DriveKitCoreModule.DKConfigDetectionMode",
+                    "usr": "s:18DriveKitCoreModule21DKConfigDetectionModeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "DriveKitCoreModule.DKConfigDetectionMode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DKConfigDetectionMode",
+                        "printedName": "DriveKitCoreModule.DKConfigDetectionMode",
+                        "usr": "s:18DriveKitCoreModule21DKConfigDetectionModeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:18DriveKitCoreModule21DKConfigDetectionModeO3gpsyA2CmF",
+            "mangledName": "$s18DriveKitCoreModule21DKConfigDetectionModeO3gpsyA2CmF",
+            "moduleName": "DriveKitCoreModule"
+          },
+          {
+            "kind": "Var",
+            "name": "disabled",
+            "printedName": "disabled",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(DriveKitCoreModule.DKConfigDetectionMode.Type) -> DriveKitCoreModule.DKConfigDetectionMode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DKConfigDetectionMode",
+                    "printedName": "DriveKitCoreModule.DKConfigDetectionMode",
+                    "usr": "s:18DriveKitCoreModule21DKConfigDetectionModeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "DriveKitCoreModule.DKConfigDetectionMode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DKConfigDetectionMode",
+                        "printedName": "DriveKitCoreModule.DKConfigDetectionMode",
+                        "usr": "s:18DriveKitCoreModule21DKConfigDetectionModeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:18DriveKitCoreModule21DKConfigDetectionModeO8disabledyA2CmF",
+            "mangledName": "$s18DriveKitCoreModule21DKConfigDetectionModeO8disabledyA2CmF",
+            "moduleName": "DriveKitCoreModule"
+          },
+          {
+            "kind": "Var",
+            "name": "beacon",
+            "printedName": "beacon",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(DriveKitCoreModule.DKConfigDetectionMode.Type) -> DriveKitCoreModule.DKConfigDetectionMode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DKConfigDetectionMode",
+                    "printedName": "DriveKitCoreModule.DKConfigDetectionMode",
+                    "usr": "s:18DriveKitCoreModule21DKConfigDetectionModeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "DriveKitCoreModule.DKConfigDetectionMode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DKConfigDetectionMode",
+                        "printedName": "DriveKitCoreModule.DKConfigDetectionMode",
+                        "usr": "s:18DriveKitCoreModule21DKConfigDetectionModeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:18DriveKitCoreModule21DKConfigDetectionModeO6beaconyA2CmF",
+            "mangledName": "$s18DriveKitCoreModule21DKConfigDetectionModeO6beaconyA2CmF",
+            "moduleName": "DriveKitCoreModule"
+          },
+          {
+            "kind": "Var",
+            "name": "bluetooth",
+            "printedName": "bluetooth",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(DriveKitCoreModule.DKConfigDetectionMode.Type) -> DriveKitCoreModule.DKConfigDetectionMode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DKConfigDetectionMode",
+                    "printedName": "DriveKitCoreModule.DKConfigDetectionMode",
+                    "usr": "s:18DriveKitCoreModule21DKConfigDetectionModeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "DriveKitCoreModule.DKConfigDetectionMode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DKConfigDetectionMode",
+                        "printedName": "DriveKitCoreModule.DKConfigDetectionMode",
+                        "usr": "s:18DriveKitCoreModule21DKConfigDetectionModeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:18DriveKitCoreModule21DKConfigDetectionModeO9bluetoothyA2CmF",
+            "mangledName": "$s18DriveKitCoreModule21DKConfigDetectionModeO9bluetoothyA2CmF",
+            "moduleName": "DriveKitCoreModule"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(value:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "DriveKitCoreModule.DKConfigDetectionMode?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DKConfigDetectionMode",
+                    "printedName": "DriveKitCoreModule.DKConfigDetectionMode",
+                    "usr": "s:18DriveKitCoreModule21DKConfigDetectionModeO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:18DriveKitCoreModule21DKConfigDetectionModeO5valueACSgSS_tcfc",
+            "mangledName": "$s18DriveKitCoreModule21DKConfigDetectionModeO5valueACSgSS_tcfc",
+            "moduleName": "DriveKitCoreModule",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "value",
+            "printedName": "value",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:18DriveKitCoreModule21DKConfigDetectionModeO5valueSSvp",
+            "mangledName": "$s18DriveKitCoreModule21DKConfigDetectionModeO5valueSSvp",
+            "moduleName": "DriveKitCoreModule",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18DriveKitCoreModule21DKConfigDetectionModeO5valueSSvg",
+                "mangledName": "$s18DriveKitCoreModule21DKConfigDetectionModeO5valueSSvg",
+                "moduleName": "DriveKitCoreModule",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "DriveKitCoreModule.DKConfigDetectionMode?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DKConfigDetectionMode",
+                    "printedName": "DriveKitCoreModule.DKConfigDetectionMode",
+                    "usr": "s:18DriveKitCoreModule21DKConfigDetectionModeO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:18DriveKitCoreModule21DKConfigDetectionModeO8rawValueACSgSi_tcfc",
+            "mangledName": "$s18DriveKitCoreModule21DKConfigDetectionModeO8rawValueACSgSi_tcfc",
+            "moduleName": "DriveKitCoreModule",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:18DriveKitCoreModule21DKConfigDetectionModeO8rawValueSivp",
+            "mangledName": "$s18DriveKitCoreModule21DKConfigDetectionModeO8rawValueSivp",
+            "moduleName": "DriveKitCoreModule",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18DriveKitCoreModule21DKConfigDetectionModeO8rawValueSivg",
+                "mangledName": "$s18DriveKitCoreModule21DKConfigDetectionModeO8rawValueSivg",
+                "moduleName": "DriveKitCoreModule",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:18DriveKitCoreModule21DKConfigDetectionModeO",
+        "mangledName": "$s18DriveKitCoreModule21DKConfigDetectionModeO",
+        "moduleName": "DriveKitCoreModule",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "enumRawTypeName": "Int",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "DKConfigBeacon",
+        "printedName": "DKConfigBeacon",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(proximityUuid:major:minor:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DKConfigBeacon",
+                "printedName": "DriveKitCoreModule.DKConfigBeacon",
+                "usr": "s:18DriveKitCoreModule14DKConfigBeaconV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "hasDefaultArg": true,
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "hasDefaultArg": true,
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:18DriveKitCoreModule14DKConfigBeaconV13proximityUuid5major5minorACSS_S2itcfc",
+            "mangledName": "$s18DriveKitCoreModule14DKConfigBeaconV13proximityUuid5major5minorACSS_S2itcfc",
+            "moduleName": "DriveKitCoreModule",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DKConfigBeacon",
+                "printedName": "DriveKitCoreModule.DKConfigBeacon",
+                "usr": "s:18DriveKitCoreModule14DKConfigBeaconV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:18DriveKitCoreModule14DKConfigBeaconV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s18DriveKitCoreModule14DKConfigBeaconV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "DriveKitCoreModule",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18DriveKitCoreModule14DKConfigBeaconV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s18DriveKitCoreModule14DKConfigBeaconV6encode2toys7Encoder_p_tKF",
+            "moduleName": "DriveKitCoreModule",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:18DriveKitCoreModule14DKConfigBeaconV",
+        "mangledName": "$s18DriveKitCoreModule14DKConfigBeaconV",
+        "moduleName": "DriveKitCoreModule",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "DKConfigBluetoothDevice",
+        "printedName": "DKConfigBluetoothDevice",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(macAddress:name:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DKConfigBluetoothDevice",
+                "printedName": "DriveKitCoreModule.DKConfigBluetoothDevice",
+                "usr": "s:18DriveKitCoreModule23DKConfigBluetoothDeviceV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:18DriveKitCoreModule23DKConfigBluetoothDeviceV10macAddress4nameACSS_SSSgtcfc",
+            "mangledName": "$s18DriveKitCoreModule23DKConfigBluetoothDeviceV10macAddress4nameACSS_SSSgtcfc",
+            "moduleName": "DriveKitCoreModule",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DKConfigBluetoothDevice",
+                "printedName": "DriveKitCoreModule.DKConfigBluetoothDevice",
+                "usr": "s:18DriveKitCoreModule23DKConfigBluetoothDeviceV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:18DriveKitCoreModule23DKConfigBluetoothDeviceV4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s18DriveKitCoreModule23DKConfigBluetoothDeviceV4fromACs7Decoder_p_tKcfc",
+            "moduleName": "DriveKitCoreModule",
+            "implicit": true,
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18DriveKitCoreModule23DKConfigBluetoothDeviceV6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s18DriveKitCoreModule23DKConfigBluetoothDeviceV6encode2toys7Encoder_p_tKF",
+            "moduleName": "DriveKitCoreModule",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:18DriveKitCoreModule23DKConfigBluetoothDeviceV",
+        "mangledName": "$s18DriveKitCoreModule23DKConfigBluetoothDeviceV",
+        "moduleName": "DriveKitCoreModule",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "DriveKitCoreModule",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
         "name": "DKModuleManager",
         "printedName": "DKModuleManager",
         "children": [
@@ -11459,6 +12639,116 @@
                 "declKind": "Accessor",
                 "usr": "s:18DriveKitCoreModule15DKModuleManagerC12tripAnalysisAA06DKTriphD0_pSgvM",
                 "mangledName": "$s18DriveKitCoreModule15DKModuleManagerC12tripAnalysisAA06DKTriphD0_pSgvM",
+                "moduleName": "DriveKitCoreModule",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "vehicle",
+            "printedName": "vehicle",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any DriveKitCoreModule.DKVehicleModule)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DKVehicleModule",
+                    "printedName": "any DriveKitCoreModule.DKVehicleModule",
+                    "usr": "s:18DriveKitCoreModule09DKVehicleD0P"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:18DriveKitCoreModule15DKModuleManagerC7vehicleAA09DKVehicleD0_pSgvp",
+            "mangledName": "$s18DriveKitCoreModule15DKModuleManagerC7vehicleAA09DKVehicleD0_pSgvp",
+            "moduleName": "DriveKitCoreModule",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any DriveKitCoreModule.DKVehicleModule)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DKVehicleModule",
+                        "printedName": "any DriveKitCoreModule.DKVehicleModule",
+                        "usr": "s:18DriveKitCoreModule09DKVehicleD0P"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18DriveKitCoreModule15DKModuleManagerC7vehicleAA09DKVehicleD0_pSgvg",
+                "mangledName": "$s18DriveKitCoreModule15DKModuleManagerC7vehicleAA09DKVehicleD0_pSgvg",
+                "moduleName": "DriveKitCoreModule",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any DriveKitCoreModule.DKVehicleModule)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DKVehicleModule",
+                        "printedName": "any DriveKitCoreModule.DKVehicleModule",
+                        "usr": "s:18DriveKitCoreModule09DKVehicleD0P"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18DriveKitCoreModule15DKModuleManagerC7vehicleAA09DKVehicleD0_pSgvs",
+                "mangledName": "$s18DriveKitCoreModule15DKModuleManagerC7vehicleAA09DKVehicleD0_pSgvs",
+                "moduleName": "DriveKitCoreModule",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:18DriveKitCoreModule15DKModuleManagerC7vehicleAA09DKVehicleD0_pSgvM",
+                "mangledName": "$s18DriveKitCoreModule15DKModuleManagerC7vehicleAA09DKVehicleD0_pSgvM",
                 "moduleName": "DriveKitCoreModule",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -11579,6 +12869,28 @@
             "declKind": "Func",
             "usr": "s:18DriveKitCoreModule014DKTripAnalysisD0P35tripSyncFinishedWithEndTripLocation03endlM0yAA0eM0_p_tF",
             "mangledName": "$s18DriveKitCoreModule014DKTripAnalysisD0P35tripSyncFinishedWithEndTripLocation03endlM0yAA0eM0_p_tF",
+            "moduleName": "DriveKitCoreModule",
+            "genericSig": "<τ_0_0 where τ_0_0 : DriveKitCoreModule.DKTripAnalysisModule>",
+            "sugared_genericSig": "<Self where Self : DriveKitCoreModule.DKTripAnalysisModule>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getConfig",
+            "printedName": "getConfig()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DKConfigTripAnalysis",
+                "printedName": "DriveKitCoreModule.DKConfigTripAnalysis",
+                "usr": "s:18DriveKitCoreModule20DKConfigTripAnalysisV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18DriveKitCoreModule014DKTripAnalysisD0P9getConfigAA012DKConfigTripF0VyF",
+            "mangledName": "$s18DriveKitCoreModule014DKTripAnalysisD0P9getConfigAA012DKConfigTripF0VyF",
             "moduleName": "DriveKitCoreModule",
             "genericSig": "<τ_0_0 where τ_0_0 : DriveKitCoreModule.DKTripAnalysisModule>",
             "sugared_genericSig": "<Self where Self : DriveKitCoreModule.DKTripAnalysisModule>",
@@ -11859,6 +13171,97 @@
             "printedName": "Hashable",
             "usr": "s:SH",
             "mangledName": "$sSH"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "DKVehicleModule",
+        "printedName": "DKVehicleModule",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "syncVehicles",
+            "printedName": "syncVehicles(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Bool) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18DriveKitCoreModule09DKVehicleD0P12syncVehiclesyyySbcF",
+            "mangledName": "$s18DriveKitCoreModule09DKVehicleD0P12syncVehiclesyyySbcF",
+            "moduleName": "DriveKitCoreModule",
+            "genericSig": "<τ_0_0 where τ_0_0 : DriveKitCoreModule.DKVehicleModule>",
+            "sugared_genericSig": "<Self where Self : DriveKitCoreModule.DKVehicleModule>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getConfig",
+            "printedName": "getConfig()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DKConfigVehicle",
+                "printedName": "DriveKitCoreModule.DKConfigVehicle",
+                "usr": "s:18DriveKitCoreModule15DKConfigVehicleV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:18DriveKitCoreModule09DKVehicleD0P9getConfigAA15DKConfigVehicleVyF",
+            "mangledName": "$s18DriveKitCoreModule09DKVehicleD0P9getConfigAA15DKConfigVehicleVyF",
+            "moduleName": "DriveKitCoreModule",
+            "genericSig": "<τ_0_0 where τ_0_0 : DriveKitCoreModule.DKVehicleModule>",
+            "sugared_genericSig": "<Self where Self : DriveKitCoreModule.DKVehicleModule>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:18DriveKitCoreModule09DKVehicleD0P",
+        "mangledName": "$s18DriveKitCoreModule09DKVehicleD0P",
+        "moduleName": "DriveKitCoreModule",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
           }
         ]
       },
@@ -14964,6 +16367,23 @@
         "declAttributes": [
           "RawDocComment"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "DriveKitCoreModule",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "DriveKitCoreModule"
       },
       {
         "kind": "Import",
@@ -20664,6 +22084,47 @@
             "fixedbinaryorder": 0
           },
           {
+            "kind": "Var",
+            "name": "vehiclesSync",
+            "printedName": "vehiclesSync",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(DriveKitCoreModule.DKRemoteEvent.Type) -> DriveKitCoreModule.DKRemoteEvent",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DKRemoteEvent",
+                    "printedName": "DriveKitCoreModule.DKRemoteEvent",
+                    "usr": "c:@M@DriveKitCoreModule@E@DKRemoteEvent"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "DriveKitCoreModule.DKRemoteEvent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DKRemoteEvent",
+                        "printedName": "DriveKitCoreModule.DKRemoteEvent",
+                        "usr": "c:@M@DriveKitCoreModule@E@DKRemoteEvent"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@DriveKitCoreModule@E@DKRemoteEvent@DKRemoteEventVehiclesSync",
+            "mangledName": "$s18DriveKitCoreModule13DKRemoteEventO12vehiclesSyncyA2CmF",
+            "moduleName": "DriveKitCoreModule",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 1
+          },
+          {
             "kind": "Function",
             "name": "processHeaders",
             "printedName": "processHeaders(_:)",
@@ -22888,6 +24349,51 @@
           },
           {
             "kind": "Conformance",
+            "name": "DataProtocol",
+            "printedName": "DataProtocol",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "Regions",
+                "printedName": "Regions",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CollectionOfOne",
+                    "printedName": "Swift.CollectionOfOne<[Swift.UInt8]>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Array",
+                        "printedName": "[Swift.UInt8]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "UInt8",
+                            "printedName": "Swift.UInt8",
+                            "usr": "s:s5UInt8V"
+                          }
+                        ],
+                        "usr": "s:Sa"
+                      }
+                    ],
+                    "usr": "s:s15CollectionOfOneV"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:10Foundation12DataProtocolP",
+            "mangledName": "$s10Foundation12DataProtocolP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "MutableDataProtocol",
+            "printedName": "MutableDataProtocol",
+            "usr": "s:10Foundation19MutableDataProtocolP",
+            "mangledName": "$s10Foundation19MutableDataProtocolP"
+          },
+          {
+            "kind": "Conformance",
             "name": "ContiguousBytes",
             "printedName": "ContiguousBytes",
             "usr": "s:10Foundation15ContiguousBytesP",
@@ -22934,51 +24440,6 @@
             ],
             "usr": "s:10Foundation26DecodableWithConfigurationP",
             "mangledName": "$s10Foundation26DecodableWithConfigurationP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "DataProtocol",
-            "printedName": "DataProtocol",
-            "children": [
-              {
-                "kind": "TypeWitness",
-                "name": "Regions",
-                "printedName": "Regions",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CollectionOfOne",
-                    "printedName": "Swift.CollectionOfOne<[Swift.UInt8]>",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Array",
-                        "printedName": "[Swift.UInt8]",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "UInt8",
-                            "printedName": "Swift.UInt8",
-                            "usr": "s:s5UInt8V"
-                          }
-                        ],
-                        "usr": "s:Sa"
-                      }
-                    ],
-                    "usr": "s:s15CollectionOfOneV"
-                  }
-                ]
-              }
-            ],
-            "usr": "s:10Foundation12DataProtocolP",
-            "mangledName": "$s10Foundation12DataProtocolP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "MutableDataProtocol",
-            "printedName": "MutableDataProtocol",
-            "usr": "s:10Foundation19MutableDataProtocolP",
-            "mangledName": "$s10Foundation19MutableDataProtocolP"
           }
         ]
       },
@@ -25296,6 +26757,20 @@
             ],
             "usr": "s:7Combine9SchedulerP",
             "mangledName": "$s7Combine9SchedulerP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "TaskExecutor",
+            "printedName": "TaskExecutor",
+            "usr": "s:Sch",
+            "mangledName": "$sSch"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Executor",
+            "printedName": "Executor",
+            "usr": "s:ScF",
+            "mangledName": "$sScF"
           }
         ]
       }
@@ -25306,56 +26781,56 @@
     {
       "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/DriveKit.swift",
       "kind": "BooleanLiteral",
-      "offset": 1405,
+      "offset": 1503,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/DriveKit.swift",
       "kind": "BooleanLiteral",
-      "offset": 1739,
+      "offset": 1837,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/DriveKit.swift",
       "kind": "BooleanLiteral",
-      "offset": 1801,
+      "offset": 1899,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/DriveKit.swift",
       "kind": "StringLiteral",
-      "offset": 1871,
+      "offset": 1969,
       "length": 46,
       "value": "\"drivekit-initializedMigrationPreviousVersion\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/DriveKit.swift",
       "kind": "BooleanLiteral",
-      "offset": 8055,
+      "offset": 8825,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/DriveKit.swift",
       "kind": "BooleanLiteral",
-      "offset": 8329,
+      "offset": 9099,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/DriveKit.swift",
       "kind": "BooleanLiteral",
-      "offset": 8474,
+      "offset": 9244,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/DriveKit.swift",
       "kind": "StringLiteral",
-      "offset": 18072,
+      "offset": 20688,
       "length": 19,
       "value": "\"DKAutoInitEnabled\""
     },
@@ -25621,35 +27096,28 @@
     {
       "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/sdkDiagnosis\/DKSDKDiagnosisOperation.swift",
       "kind": "FloatLiteral",
-      "offset": 396,
-      "length": 3,
-      "value": "3.5"
-    },
-    {
-      "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/sdkDiagnosis\/DKSDKDiagnosisOperation.swift",
-      "kind": "FloatLiteral",
-      "offset": 451,
+      "offset": 385,
       "length": 4,
       "value": "26.0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/sdkDiagnosis\/DKSDKDiagnosisOperation.swift",
       "kind": "BooleanLiteral",
-      "offset": 775,
+      "offset": 709,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/sdkDiagnosis\/DKSDKDiagnosisOperation.swift",
       "kind": "BooleanLiteral",
-      "offset": 816,
+      "offset": 750,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/sdkDiagnosis\/DKSDKDiagnosisOperation.swift",
       "kind": "BooleanLiteral",
-      "offset": 862,
+      "offset": 796,
       "length": 5,
       "value": "false"
     },
@@ -25782,7 +27250,7 @@
     {
       "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/permissions\/DKDiagnosisHelper.swift",
       "kind": "IntegerLiteral",
-      "offset": 10504,
+      "offset": 10894,
       "length": 1,
       "value": "3"
     },
@@ -25831,91 +27299,112 @@
     {
       "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/logs\/DriveKitLog.swift",
       "kind": "StringLiteral",
-      "offset": 258,
+      "offset": 303,
       "length": 23,
       "value": "\"dk_logging_preference\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/logs\/DriveKitLog.swift",
       "kind": "StringLiteral",
-      "offset": 319,
+      "offset": 364,
       "length": 13,
       "value": "\"dk-logs.zip\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/logs\/DriveKitLog.swift",
       "kind": "StringLiteral",
-      "offset": 377,
+      "offset": 411,
+      "length": 8,
+      "value": "\"config\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/logs\/DriveKitLog.swift",
+      "kind": "StringLiteral",
+      "offset": 464,
       "length": 9,
       "value": "\"dk-logs\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/logs\/DriveKitLog.swift",
       "kind": "StringLiteral",
-      "offset": 452,
+      "offset": 539,
       "length": 9,
       "value": "\"dk-logs\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/logs\/DriveKitLog.swift",
       "kind": "IntegerLiteral",
-      "offset": 514,
+      "offset": 601,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/logs\/DriveKitLog.swift",
       "kind": "IntegerLiteral",
-      "offset": 648,
+      "offset": 735,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/logs\/DriveKitLog.swift",
       "kind": "BooleanLiteral",
-      "offset": 799,
+      "offset": 886,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/logs\/DriveKitLog.swift",
       "kind": "BooleanLiteral",
-      "offset": 1094,
+      "offset": 1181,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/logs\/DriveKitLog.swift",
       "kind": "BooleanLiteral",
-      "offset": 1131,
+      "offset": 1218,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/logs\/DriveKitLog.swift",
       "kind": "BooleanLiteral",
-      "offset": 2145,
+      "offset": 2232,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/logs\/DriveKitLog.swift",
       "kind": "BooleanLiteral",
-      "offset": 2342,
+      "offset": 2429,
       "length": 4,
       "value": "true"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/logs\/DriveKitLog.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2858,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/logs\/DriveKitLog.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3191,
+      "length": 5,
+      "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/logs\/DriveKitLog.swift",
       "kind": "StringLiteral",
-      "offset": 9294,
+      "offset": 15979,
       "length": 7,
       "value": "\"ERROR\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/logs\/DriveKitLog.swift",
       "kind": "StringLiteral",
-      "offset": 9318,
+      "offset": 16003,
       "length": 6,
       "value": "\"INFO\""
     },
@@ -25956,29 +27445,36 @@
     },
     {
       "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/sdkDiagnosis\/DKSDKDiagnosis.swift",
+      "kind": "FloatLiteral",
+      "offset": 431,
+      "length": 3,
+      "value": "3.5"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/sdkDiagnosis\/DKSDKDiagnosis.swift",
       "kind": "BooleanLiteral",
-      "offset": 6021,
+      "offset": 6094,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/sdkDiagnosis\/DKSDKDiagnosis.swift",
       "kind": "BooleanLiteral",
-      "offset": 6067,
+      "offset": 6140,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/sdkDiagnosis\/DKSDKDiagnosis.swift",
       "kind": "BooleanLiteral",
-      "offset": 6608,
+      "offset": 6681,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/sdkDiagnosis\/DKSDKDiagnosis.swift",
       "kind": "IntegerLiteral",
-      "offset": 8820,
+      "offset": 11483,
       "length": 9,
       "value": "1"
     },
@@ -26107,6 +27603,41 @@
       "offset": 9979,
       "length": 4,
       "value": "\"OR\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/logs\/config\/DKConfig.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5144,
+      "length": 8,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/logs\/config\/DKConfig.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5162,
+      "length": 6,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/logs\/config\/DKConfig.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5178,
+      "length": 9,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/logs\/config\/DKConfig.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5952,
+      "length": 2,
+      "value": "-1"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/logs\/config\/DKConfig.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5969,
+      "length": 2,
+      "value": "-1"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/NTP\/NTPClient.swift",
@@ -26340,6 +27871,27 @@
       "value": "8.0"
     },
     {
+      "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/installationId\/InstallationIdManager.swift",
+      "kind": "StringLiteral",
+      "offset": 380,
+      "length": 25,
+      "value": "\"drivekit-installationId\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/installationId\/InstallationIdManager.swift",
+      "kind": "StringLiteral",
+      "offset": 444,
+      "length": 27,
+      "value": "\"drivekit-installationDate\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/syncRequest\/DKVehiclesSyncRequestManager.swift",
+      "kind": "StringLiteral",
+      "offset": 298,
+      "length": 36,
+      "value": "\"DKVehiclesSyncRequestIdentifierKey\""
+    },
+    {
       "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/user\/DeleteAccountStatus.swift",
       "kind": "IntegerLiteral",
       "offset": 253,
@@ -26447,86 +27999,100 @@
     {
       "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/networking\/NetworkingTaskManager.swift",
       "kind": "Dictionary",
-      "offset": 409,
+      "offset": 441,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/networking\/NetworkingTaskManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 733,
+      "offset": 765,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/networking\/NetworkingTaskManager.swift",
       "kind": "StringLiteral",
-      "offset": 889,
+      "offset": 921,
       "length": 44,
       "value": "\"com.drivequant.drivekit-core.delegateQueue\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/networking\/NetworkingTaskManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 2396,
+      "offset": 2428,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/networking\/NetworkingTaskManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 6811,
+      "offset": 6843,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/networking\/NetworkingTaskManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 6886,
+      "offset": 6918,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/networking\/NetworkingTaskManager.swift",
       "kind": "StringLiteral",
-      "offset": 7142,
+      "offset": 7044,
       "length": 15,
       "value": "\"Unknown error\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/networking\/NetworkingTaskManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 7211,
+      "offset": 7113,
       "length": 3,
       "value": "100"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/networking\/NetworkingTaskManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 7218,
+      "offset": 7120,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/networking\/NetworkingTaskManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 7396,
+      "offset": 7298,
       "length": 3,
       "value": "401"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/networking\/NetworkingTaskManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 7466,
+      "offset": 7368,
       "length": 3,
       "value": "403"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/networking\/NetworkingTaskManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 7530,
+      "offset": 7432,
       "length": 3,
       "value": "429"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/networking\/NetworkingTaskManager.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7535,
+      "length": 3,
+      "value": "100"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/networking\/NetworkingTaskManager.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7542,
+      "length": 1,
+      "value": "4"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/networking\/NetworkingTaskManager.swift",
@@ -26540,103 +28106,89 @@
       "kind": "IntegerLiteral",
       "offset": 7640,
       "length": 1,
-      "value": "4"
-    },
-    {
-      "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/networking\/NetworkingTaskManager.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7731,
-      "length": 3,
-      "value": "100"
-    },
-    {
-      "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/networking\/NetworkingTaskManager.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7738,
-      "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/networking\/NetworkingTaskManager.swift",
       "kind": "StringLiteral",
-      "offset": 7936,
+      "offset": 7838,
       "length": 107,
       "value": "\"Error response received for network task with identifier \""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/networking\/NetworkingTaskManager.swift",
       "kind": "StringLiteral",
-      "offset": 8007,
+      "offset": 7909,
       "length": 3,
       "value": "\" and http status code \""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/networking\/NetworkingTaskManager.swift",
       "kind": "StringLiteral",
-      "offset": 8042,
+      "offset": 7944,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/networking\/NetworkingTaskManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 9351,
+      "offset": 9253,
       "length": 3,
       "value": "100"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/networking\/NetworkingTaskManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 9358,
+      "offset": 9260,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/networking\/NetworkingTaskManager.swift",
       "kind": "StringLiteral",
-      "offset": 9442,
+      "offset": 9344,
       "length": 66,
       "value": "\"Response received for network task with identifier \""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/networking\/NetworkingTaskManager.swift",
       "kind": "StringLiteral",
-      "offset": 9507,
+      "offset": 9409,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/networking\/NetworkingTaskManager.swift",
       "kind": "StringLiteral",
-      "offset": 9824,
+      "offset": 9726,
       "length": 107,
       "value": "\"Error response received for network task with identifier \""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/networking\/NetworkingTaskManager.swift",
       "kind": "StringLiteral",
-      "offset": 9895,
+      "offset": 9797,
       "length": 3,
       "value": "\" and http status code \""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/networking\/NetworkingTaskManager.swift",
       "kind": "StringLiteral",
-      "offset": 9930,
+      "offset": 9832,
       "length": 1,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/networking\/NetworkingTaskManager.swift",
       "kind": "Dictionary",
-      "offset": 12516,
+      "offset": 12556,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/networking\/NetworkingTaskManager.swift",
       "kind": "Dictionary",
-      "offset": 12944,
+      "offset": 12985,
       "length": 3,
       "value": "[]"
     },
@@ -26845,15 +28397,22 @@
     },
     {
       "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/remoteEvent\/DKRemoteEvent.swift",
+      "kind": "IntegerLiteral",
+      "offset": 420,
+      "length": 12,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/remoteEvent\/DKRemoteEvent.swift",
       "kind": "Array",
-      "offset": 1124,
+      "offset": 1224,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/NTP\/NSTimer+ClosureKit.swift",
       "kind": "BooleanLiteral",
-      "offset": 1000,
+      "offset": 1045,
       "length": 5,
       "value": "false"
     },
@@ -26869,7 +28428,7 @@
       "kind": "IntegerLiteral",
       "offset": 282,
       "length": 1,
-      "value": "4"
+      "value": "5"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/drivekit-core\/drivekit-core\/config\/DriveKitCoreConstants.swift",
